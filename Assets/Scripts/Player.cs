@@ -15,11 +15,15 @@ public class Player : MonoBehaviour
     public Transform ItemDropPositionUp;
     public Transform ItemDropPositionDown;
 
+    public float PlaceholderDelay = 0.5f;
+    public SpriteRenderer PlaceholderSpriteRenderer;
+
     public float WeightSpeedReduction = 1.0f;
 
     new Rigidbody2D rigidbody;
 
     Item carriedItem = null;
+    float timeSincePickedUp = 99;
 
     MoveDirection moveDirection = MoveDirection.Right;
 
@@ -49,7 +53,12 @@ public class Player : MonoBehaviour
         {
             Vector2 pickupOffset = carriedItem.PickupPosition.position - carriedItem.transform.position;
             carriedItem.transform.position = CarryPosition.position - (Vector3)pickupOffset;
+
+            PlaceholderSpriteRenderer.transform.position = GetItemDropPosition();
         }
+
+        PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && timeSincePickedUp > PlaceholderDelay);
+        timeSincePickedUp += Time.deltaTime;
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
@@ -90,21 +99,33 @@ public class Player : MonoBehaviour
 
         carriedItem = closestItem;
         carriedItem.OnPickup();
+
+        PlaceholderSpriteRenderer.sprite = carriedItem.SpriteRenderer.sprite;
+        PlaceholderSpriteRenderer.transform.localScale = carriedItem.SpriteRenderer.transform.localScale;
+        PlaceholderSpriteRenderer.transform.rotation = carriedItem.SpriteRenderer.transform.rotation;
+
+        timeSincePickedUp = 0.0f;
     }
 
     void DropItem()
     {
-        Transform dropTransform = moveDirection switch
-        {
-            MoveDirection.Left  => ItemDropPositionLeft,
-            MoveDirection.Right => ItemDropPositionRight,
-            MoveDirection.Up    => ItemDropPositionUp,
-            MoveDirection.Down  => ItemDropPositionDown,
-            _ => null
-        };
-
-        carriedItem.transform.position = dropTransform.position;
+        carriedItem.transform.position = GetItemDropPosition();
         carriedItem.OnDrop();
         carriedItem = null;
+
+        PlaceholderSpriteRenderer.sprite = null;
+    }
+
+    Vector2 GetItemDropPosition()
+    {
+        Transform dropTransform = moveDirection switch
+        {
+            MoveDirection.Left => ItemDropPositionLeft,
+            MoveDirection.Right => ItemDropPositionRight,
+            MoveDirection.Up => ItemDropPositionUp,
+            MoveDirection.Down => ItemDropPositionDown,
+            _ => null
+        };
+        return dropTransform.position;
     }
 }

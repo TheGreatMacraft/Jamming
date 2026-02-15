@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     public bool IsBeingCarried => !IsPlaced;
 
     public Transform PickupPosition;
+    [HideInInspector] public SpriteRenderer SpriteRenderer;
 
     new Rigidbody2D rigidbody;
 
@@ -16,6 +17,7 @@ public class Item : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
