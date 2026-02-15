@@ -9,19 +9,27 @@ public class Item : MonoBehaviour
 
     public Transform PickupPosition;
 
+    new Rigidbody2D rigidbody;
+
+    bool justDropped = false;
 
     void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if (justDropped && rigidbody.IsSleeping())
+        {
+            justDropped = false;
+            rigidbody.bodyType = RigidbodyType2D.Kinematic;
+        }
     }
 
     public void OnPickup()
     {
+        rigidbody.bodyType = RigidbodyType2D.Kinematic;
         foreach (Collider2D collider in GetComponents<Collider2D>())
         {
             if (collider.isTrigger == false)
@@ -32,11 +40,13 @@ public class Item : MonoBehaviour
 
     public void OnDrop()
     {
+        rigidbody.bodyType = RigidbodyType2D.Dynamic;
         foreach (Collider2D collider in GetComponents<Collider2D>())
         {
             if (collider.isTrigger == false)
                 collider.enabled = true;
         }
         IsPlaced = true;
+        justDropped = true;
     }
 }

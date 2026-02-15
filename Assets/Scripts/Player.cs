@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using System.Linq;
-using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -9,11 +10,18 @@ public class Player : MonoBehaviour
     public CircleCollider2D PickupReachCollider;
 
     public Transform CarryPosition;
-    public Transform ItemDropPosition;
+    public Transform ItemDropPositionLeft;
+    public Transform ItemDropPositionRight;
+    public Transform ItemDropPositionUp;
+    public Transform ItemDropPositionDown;
+
+    public float WeightSpeedReduction = 1.0f;
 
     new Rigidbody2D rigidbody;
 
     Item carriedItem = null;
+
+    MoveDirection moveDirection = MoveDirection.Right;
 
     void Start()
     {
@@ -28,13 +36,14 @@ public class Player : MonoBehaviour
         if (Keyboard.current.downArrowKey.isPressed || Keyboard.current.sKey.isPressed) input.y -= 1.0f;
         if (Keyboard.current.upArrowKey.isPressed || Keyboard.current.wKey.isPressed) input.y += 1.0f;
 
-        float WeightedSpeed = MoveSpeed;
-        if (carriedItem != null)
-        {
-            
-        }
-        rigidbody.linearVelocity = input.normalized * MoveSpeed;
+        float weight = (carriedItem != null) ? carriedItem.Weight : 0.0f;
+        float weightMultiplier = 1.0f - (weight/100.0f) * WeightSpeedReduction;
+        rigidbody.linearVelocity = input.normalized * MoveSpeed * weightMultiplier;
 
+        if (input.x > 0.5f) moveDirection = MoveDirection.Right;
+        else if (input.x < -0.5f) moveDirection = MoveDirection.Left;
+        if (input.y > 0.5f) moveDirection = MoveDirection.Up;
+        else if (input.y < -0.5f) moveDirection = MoveDirection.Down;
 
         if (carriedItem != null)
         {
@@ -85,7 +94,16 @@ public class Player : MonoBehaviour
 
     void DropItem()
     {
-        carriedItem.transform.position = ItemDropPosition.position;
+        Transform dropTransform = moveDirection switch
+        {
+            MoveDirection.Left  => ItemDropPositionLeft,
+            MoveDirection.Right => ItemDropPositionRight,
+            MoveDirection.Up    => ItemDropPositionUp,
+            MoveDirection.Down  => ItemDropPositionDown,
+            _ => null
+        };
+
+        carriedItem.transform.position = dropTransform.position;
         carriedItem.OnDrop();
         carriedItem = null;
     }
