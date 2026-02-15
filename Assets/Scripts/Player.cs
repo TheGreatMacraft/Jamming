@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     public Transform ItemDropPositionUp;
     public Transform ItemDropPositionDown;
 
-    public float PlaceholderDelay = 0.5f;
     public SpriteRenderer PlaceholderSpriteRenderer;
 
     public float WeightSpeedReduction = 1.0f;
@@ -23,7 +22,8 @@ public class Player : MonoBehaviour
     new Rigidbody2D rigidbody;
 
     Item carriedItem = null;
-    float timeSincePickedUp = 99;
+    bool movedSincePickup = false;
+    Vector2 originalPickupPosition;
 
     MoveDirection moveDirection = MoveDirection.Right;
 
@@ -57,8 +57,9 @@ public class Player : MonoBehaviour
             PlaceholderSpriteRenderer.transform.position = GetItemDropPosition();
         }
 
-        PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && timeSincePickedUp > PlaceholderDelay);
-        timeSincePickedUp += Time.deltaTime;
+        if (input != Vector2.zero)
+            movedSincePickup = true;
+        PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && movedSincePickup);
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
@@ -97,19 +98,24 @@ public class Player : MonoBehaviour
         if (closestItem == null)
             return;
 
+        movedSincePickup = false;
+        originalPickupPosition = closestItem.transform.position;
+
         carriedItem = closestItem;
         carriedItem.OnPickup();
 
         PlaceholderSpriteRenderer.sprite = carriedItem.SpriteRenderer.sprite;
         PlaceholderSpriteRenderer.transform.localScale = carriedItem.SpriteRenderer.transform.localScale;
         PlaceholderSpriteRenderer.transform.rotation = carriedItem.SpriteRenderer.transform.rotation;
-
-        timeSincePickedUp = 0.0f;
     }
 
     void DropItem()
     {
-        carriedItem.transform.position = GetItemDropPosition();
+        if (!movedSincePickup)
+            carriedItem.transform.position = originalPickupPosition;
+        else
+            carriedItem.transform.position = GetItemDropPosition();
+
         carriedItem.OnDrop();
         carriedItem = null;
 
