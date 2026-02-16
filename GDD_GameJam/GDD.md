@@ -23,14 +23,13 @@ The game ends when the requirement is not meet in given time
 
 # Art
 
-- rug - cannot be placed where items already are
 
 ## Dining room
-- [ ] table
+- [x] table
 - [x] chair
 - [x] stool
 ---
-
+- [ ] rug - cannot be placed where items already are
 
 ## Bedroom
 - [ ] wardrobe
