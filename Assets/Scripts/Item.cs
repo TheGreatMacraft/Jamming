@@ -11,19 +11,15 @@ public class Item : MonoBehaviour
     [HideInInspector] public SpriteRenderer SpriteRenderer;
 
     new Rigidbody2D rigidbody;
+    AutoSortOrder autoSortOrder;
 
     bool justDropped = false;
 
-    void Start()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void Update()
-    {
-        int carrySortingOrder = IsBeingCarried ? 150 : 0;
-        SpriteRenderer.sortingOrder = Util.CalcSortingOrder(transform.position.y) + carrySortingOrder;
+        autoSortOrder = GetComponent<AutoSortOrder>();
     }
 
     private void FixedUpdate()
@@ -38,12 +34,14 @@ public class Item : MonoBehaviour
     public void OnPickup()
     {
         rigidbody.bodyType = RigidbodyType2D.Kinematic;
+        rigidbody.linearVelocity = Vector2.zero;
         foreach (Collider2D collider in GetComponents<Collider2D>())
         {
             if (collider.isTrigger == false)
                 collider.enabled = false;
         }
         IsPlaced = false;
+        autoSortOrder.YOffset = -1.5f;
     }
 
     public void OnDrop()
@@ -56,5 +54,6 @@ public class Item : MonoBehaviour
         }
         IsPlaced = true;
         justDropped = true;
+        autoSortOrder.YOffset = 0.0f;
     }
 }

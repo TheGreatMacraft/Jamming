@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     MoveDirection moveDirection = MoveDirection.Right;
 
-    void Start()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -72,12 +72,10 @@ public class Player : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             if (carriedItem == null)
-                PickupItem();
+                PickupClosestItem();
             else
                 DropItem();
         }
-
-        PlayerSpriteRenderer.sortingOrder = Util.CalcSortingOrder(transform.position.y);
 
         if (input == Vector2.zero && carriedItem == null) PlayerAnimator.Play("Idle");
         else if (input == Vector2.zero && carriedItem != null) PlayerAnimator.Play("Squished Idle");
@@ -86,13 +84,21 @@ public class Player : MonoBehaviour
 
         if (moveDirection == MoveDirection.Left) PlayerSpriteRenderer.flipX = true;
         else if (moveDirection == MoveDirection.Right) PlayerSpriteRenderer.flipX = false;
+
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            BusinessMan bman = FindFirstObjectByType<BusinessMan>();
+            if (Vector2.Distance(bman.transform.position, transform.position) < PickupReachCollider.radius)
+            {
+                Item item = bman.SpawnNewItem();
+                if (item != null)
+                    PickupItem(item);
+            }
+        }
     }
 
-    void PickupItem()
+    void PickupClosestItem()
     {
-        if (carriedItem != null)
-            DropItem();
-
         Vector2 pickupLocalCenter = (Vector2)PickupReachCollider.transform.localPosition + PickupReachCollider.offset;
         Vector2 pickupCenter = PickupReachCollider.localToWorldMatrix.MultiplyPoint(pickupLocalCenter);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(pickupCenter, PickupReachCollider.radius);
@@ -113,13 +119,19 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (closestItem == null)
-            return;
+        if (closestItem != null)
+            PickupItem(closestItem);
+    }
+
+    void PickupItem(Item item)
+    {
+        if (carriedItem != null)
+            DropItem();
 
         movedSincePickup = false;
-        originalPickupPosition = closestItem.transform.position;
+        originalPickupPosition = item.transform.position;
 
-        carriedItem = closestItem;
+        carriedItem = item;
         carriedItem.OnPickup();
 
         PlaceholderSpriteRenderer.sprite = carriedItem.SpriteRenderer.sprite;
