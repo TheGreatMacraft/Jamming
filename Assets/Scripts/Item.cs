@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class Item : MonoBehaviour
@@ -9,6 +10,8 @@ public class Item : MonoBehaviour
 
     public Transform PickupPosition;
     [HideInInspector] public SpriteRenderer SpriteRenderer;
+
+    public Requirement[] Requirements;
 
     new Rigidbody2D rigidbody;
     AutoSortOrder autoSortOrder;
@@ -55,5 +58,15 @@ public class Item : MonoBehaviour
         IsPlaced = true;
         justDropped = true;
         autoSortOrder.YOffset = 0.0f;
+    }
+
+    public bool AreRequirementsSatisfied()
+    {
+        foreach (Requirement req in Requirements)
+        {
+            if (req.IsSatisfied(this) == false)
+                return false;
+        }
+        return true;
     }
 }
