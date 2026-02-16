@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44275ad0f3bf507439f4f623172cd5fb
+guid: 83a45f22d5ec46f4d8b5f0910b7485f2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: overview
+  - name: bed
     originalName: 
-    pivot: {x: 0.4936709, y: -0.33333334}
+    pivot: {x: 0.4791667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 79
-      height: 48
-    spriteID: 6dcc8cdada96833439fb562a64e2b0d5
+      width: 48
+      height: 53
+    spriteID: 93cf3db25a2d7db46b1d6fd8e9ff1938
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3520129111
+      value0: 3021628291
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: overview
+    name: bed
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: overview
+    - name: bed
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 16
-        width: 79
-        height: 48
-      spriteId: 6dcc8cdada96833439fb562a64e2b0d5
+        x: 9
+        y: 0
+        width: 48
+        height: 53
+      spriteId: 93cf3db25a2d7db46b1d6fd8e9ff1938
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 64}
-  previousTextureSize: {x: 128, y: 64}
+  canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 64, y: 64}
