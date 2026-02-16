@@ -57,6 +57,12 @@ public class Player : MonoBehaviour
             carriedItem.transform.position = CarryPosition.position - (Vector3)pickupOffset;
 
             PlaceholderSpriteRenderer.transform.position = GetItemDropPosition();
+
+            if (Keyboard.current.rKey.wasPressedThisFrame && carriedItem is RotateableItem rotateableItem)
+            {
+                rotateableItem.Rotate();
+                PlaceholderSpriteRenderer.sprite = carriedItem.SpriteRenderer.sprite;
+            }
         }
 
         if (input != Vector2.zero)
