@@ -77,6 +77,9 @@ public class Player : MonoBehaviour
         else if (input == Vector2.zero && carriedItem != null) PlayerAnimator.Play("Squished Idle");
         else if (input != Vector2.zero && carriedItem == null) PlayerAnimator.Play("Walk");
         else if (input != Vector2.zero && carriedItem != null) PlayerAnimator.Play("Squished Walk");
+
+        if (moveDirection == MoveDirection.Left) PlayerSpriteRenderer.flipX = true;
+        else if (moveDirection == MoveDirection.Right) PlayerSpriteRenderer.flipX = false;
     }
 
     void PickupItem()
