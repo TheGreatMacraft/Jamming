@@ -23,10 +23,38 @@ The game ends when the requirement is not meet in given time
 
 # Art
 
-- rug
+- rug - cannot be placed where items already are
 
 ## Dining room
-- table
-- chair
-- stool
-- 
+- [ ] table
+- [x] chair
+- [x] stool
+---
+
+
+## Bedroom
+- [ ] wardrobe
+- [ ] bed
+- [ ] night cupboard
+---
+- [ ] guitar
+- [ ] gaming pc table
+- [ ] 
+
+## Garage
+- [ ] Car
+- [ ] table with drawers
+- [ ] rack
+---
+- [ ] squat rack
+- [ ] motorcycle
+- [ ] lawnmower
+- [ ] boxes
+- [ ] weights
+
+
+## Bathroom
+- shower
+- toilet
+- sink
+
