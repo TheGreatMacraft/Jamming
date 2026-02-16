@@ -29,11 +29,11 @@ The game ends when the requirement is not meet in given time
 - [x] chair
 - [x] stool
 ---
-- [ ] rug - cannot be placed where items already are
+- [x] rug - cannot be placed where items already are
 
 ## Bedroom
-- [ ] wardrobe
-- [ ] bed
+- [x] wardrobe
+- [x] bed
 - [ ] night cupboard
 ---
 - [ ] guitar
