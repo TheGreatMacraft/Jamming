@@ -525,12 +525,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 494703546618486902, guid: 793969006a4cb45459472b1c5fa71d41, type: 3}
+  m_Sprite: {fileID: -4067109426427614326, guid: b67f1d6a39ac3c04badfe41e2aff70dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -545,7 +545,7 @@ Animator:
   m_GameObject: {fileID: 6613125668216771452}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 252516784675246684, guid: 793969006a4cb45459472b1c5fa71d41, type: 3}
+  m_Controller: {fileID: 4702720975399472065, guid: b67f1d6a39ac3c04badfe41e2aff70dc, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -570,3 +570,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
   YOffset: 0
+  UpdateEveryFrame: 1
