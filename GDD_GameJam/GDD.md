@@ -11,4 +11,22 @@ place:
 - Strange places inc. - redecorating company
 
 
-# Strange 
+# Strange Places INC
+
+4 rooms - dining room, bedroom, garage, toilet
+
+You get requirements, that you need to fill in given time - each requirement will have you add furniture to the dedicated room
+
+As the game progresses, the requirements are harder to meet and will invoke panic in you
+
+The game ends when the requirement is not meet in given time
+
+# Art
+
+- rug
+
+## Dining room
+- table
+- chair
+- stool
+- 
