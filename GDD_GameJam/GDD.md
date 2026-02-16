@@ -53,6 +53,9 @@ The game ends when the requirement is not meet in given time
 
 ## Bathroom
 - [ ] shower
+- [x] bathtub
+- [x] laundry machine
+- [x] laundry basket - must be near laundry machine
 - [ ] toilet
-- [ ] sink
+- [x] sink
 

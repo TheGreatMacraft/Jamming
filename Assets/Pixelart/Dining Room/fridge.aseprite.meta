@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44275ad0f3bf507439f4f623172cd5fb
+guid: ef92ad993d7466644b31fac2c51349a0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: overview
+  - name: fridge
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.53488374, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 80
-      height: 96
-    spriteID: 6dcc8cdada96833439fb562a64e2b0d5
+      width: 43
+      height: 57
+    spriteID: 94e261a53980e2c47a820b995f270809
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3520129111
+      value0: 1413014235
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: overview
+    name: fridge
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: overview
+    - name: fridge
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 80
-        height: 96
-      spriteId: 6dcc8cdada96833439fb562a64e2b0d5
+        width: 43
+        height: 57
+      spriteId: 94e261a53980e2c47a820b995f270809
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 96}
-  previousTextureSize: {x: 128, y: 128}
+  canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 64, y: 128}
