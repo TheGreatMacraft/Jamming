@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float MoveSpeed;
     public CircleCollider2D PickupReachCollider;
     public SpriteRenderer PlayerSpriteRenderer;
+    public Animator PlayerAnimator;
 
     public Transform CarryPosition;
     public Transform ItemDropPositionLeft;
@@ -71,6 +72,11 @@ public class Player : MonoBehaviour
         }
 
         PlayerSpriteRenderer.sortingOrder = Util.CalcSortingOrder(transform.position.y);
+
+        if (input == Vector2.zero && carriedItem == null) PlayerAnimator.Play("Idle");
+        else if (input == Vector2.zero && carriedItem != null) PlayerAnimator.Play("Squished Idle");
+        else if (input != Vector2.zero && carriedItem == null) PlayerAnimator.Play("Walk");
+        else if (input != Vector2.zero && carriedItem != null) PlayerAnimator.Play("Squished Walk");
     }
 
     void PickupItem()
