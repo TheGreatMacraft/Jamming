@@ -34,7 +34,7 @@ The game ends when the requirement is not meet in given time
 ## Bedroom
 - [x] wardrobe
 - [x] bed
-- [ ] night cupboard
+- [x] night cupboard
 ---
 - [ ] guitar
 - [ ] gaming pc table
@@ -43,17 +43,16 @@ The game ends when the requirement is not meet in given time
 ## Garage
 - [ ] Car
 - [ ] table with drawers
-- [ ] rack
 ---
 - [ ] squat rack
 - [ ] motorcycle
 - [ ] lawnmower
-- [ ] boxes
+- [x] boxes
 - [ ] weights
 
 
 ## Bathroom
-- shower
-- toilet
-- sink
+- [ ] shower
+- [ ] toilet
+- [ ] sink
 
