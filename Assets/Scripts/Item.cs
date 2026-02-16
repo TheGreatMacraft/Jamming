@@ -20,6 +20,12 @@ public class Item : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        int carrySortingOrder = IsBeingCarried ? 150 : 0;
+        SpriteRenderer.sortingOrder = Util.CalcSortingOrder(transform.position.y) + carrySortingOrder;
+    }
+
     private void FixedUpdate()
     {
         if (justDropped && rigidbody.IsSleeping())

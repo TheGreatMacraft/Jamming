@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public float MoveSpeed;
     public CircleCollider2D PickupReachCollider;
+    public SpriteRenderer PlayerSpriteRenderer;
 
     public Transform CarryPosition;
     public Transform ItemDropPositionLeft;
@@ -68,6 +69,8 @@ public class Player : MonoBehaviour
             else
                 DropItem();
         }
+
+        PlayerSpriteRenderer.sortingOrder = Util.CalcSortingOrder(transform.position.y);
     }
 
     void PickupItem()
