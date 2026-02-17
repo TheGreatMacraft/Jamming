@@ -8,7 +8,7 @@ public class RoomsLayout : MonoBehaviour
 
     public static RoomsLayout Instance;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }

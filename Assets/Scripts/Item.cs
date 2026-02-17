@@ -11,12 +11,16 @@ public class Item : MonoBehaviour
     public Transform PickupPosition;
     [HideInInspector] public SpriteRenderer SpriteRenderer;
 
-    public Requirement[] Requirements;
+    [HideInInspector] public bool RequirementsSatisfied;
 
     new Rigidbody2D rigidbody;
     AutoSortOrder autoSortOrder;
 
     bool justDropped = false;
+    float stuckTimer = 1.0f;
+    [HideInInspector] public bool Stuck = false;
+
+    GameObject warningFlash = null;
 
     void Awake()
     {
@@ -25,17 +29,39 @@ public class Item : MonoBehaviour
         autoSortOrder = GetComponent<AutoSortOrder>();
     }
 
+    void Start()
+    {
+        CheckRequirements();
+    }
+
+    private void Update()
+    {
+        if (justDropped)
+        {
+            stuckTimer -= Time.deltaTime;
+
+            if (stuckTimer < 0.0f)
+            {
+                Stuck = true;
+                // TODO: kaj s tem
+                //Debug.Log("stuck " + gameObject.name);
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         if (justDropped && rigidbody.IsSleeping())
         {
             justDropped = false;
             rigidbody.bodyType = RigidbodyType2D.Kinematic;
+            CheckRequirements();
         }
     }
 
     public void OnPickup()
     {
+        justDropped = false;
         rigidbody.bodyType = RigidbodyType2D.Kinematic;
         rigidbody.linearVelocity = Vector2.zero;
         foreach (Collider2D collider in GetComponents<Collider2D>())
@@ -43,8 +69,15 @@ public class Item : MonoBehaviour
             if (collider.isTrigger == false)
                 collider.enabled = false;
         }
+
         IsPlaced = false;
+
         autoSortOrder.YOffset = -1.5f;
+        if (warningFlash != null)
+        {
+            Destroy(warningFlash);
+            warningFlash = null;
+        }
     }
 
     public void OnDrop()
@@ -55,18 +88,34 @@ public class Item : MonoBehaviour
             if (collider.isTrigger == false)
                 collider.enabled = true;
         }
+
         IsPlaced = true;
         justDropped = true;
+
         autoSortOrder.YOffset = 0.0f;
     }
 
-    public bool AreRequirementsSatisfied()
+    private void CheckRequirements()
     {
-        foreach (Requirement req in Requirements)
+        bool all = true;
+        foreach (Requirement req in GetComponentsInChildren<Requirement>())
         {
             if (req.IsSatisfied(this) == false)
-                return false;
+            {
+                all = false;
+            }
         }
-        return true;
+
+        RequirementsSatisfied = all;
+
+        if (!RequirementsSatisfied && warningFlash == null)
+        {
+            warningFlash = Instantiate(Util.Instance.WarningIcon, this.transform, false);
+        }
+        else if (RequirementsSatisfied && warningFlash != null)
+        {
+            Destroy(warningFlash);
+            warningFlash = null;
+        }
     }
 }

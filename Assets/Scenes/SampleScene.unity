@@ -243,6 +243,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2174183857599705876, guid: 694df1c8e01b2ca47bf472f16d3fb9b6, type: 3}
   m_PrefabInstance: {fileID: 264445682}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &306000625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306000626}
+  - component: {fileID: 306000627}
+  - component: {fileID: 306000628}
+  m_Layer: 0
+  m_Name: NextToBed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306000626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306000625}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 601755908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306000627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306000625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3d1032847aab046a922977588ea191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextToRequirement
+  Description: This chair needs to be next to a bed
+  NextToTag: bed
+  ReachCollider: {fileID: 306000628}
+--- !u!58 &306000628
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306000625}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.41}
+  m_Radius: 1.58
 --- !u!1001 &312552644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,7 +501,8 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 347758629}
   SpriteRenderer: {fileID: 0}
-  Requirements: []
+  RequirementsSatisfied: 0
+  Stuck: 0
 --- !u!50 &339299633
 Rigidbody2D:
   serializedVersion: 5
@@ -625,7 +710,7 @@ Transform:
   m_GameObject: {fileID: 360238892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.64, y: -21.96, z: 0}
+  m_LocalPosition: {x: 2.64, y: -13.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1070,8 +1155,8 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 1295157443}
   SpriteRenderer: {fileID: 0}
-  Requirements:
-  - {fileID: 0}
+  RequirementsSatisfied: 0
+  Stuck: 0
 --- !u!212 &601755907
 SpriteRenderer:
   serializedVersion: 2
@@ -1145,6 +1230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1295157443}
+  - {fileID: 306000626}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &601755909
@@ -1334,7 +1420,7 @@ GameObject:
   - component: {fileID: 771129160}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,7 +1441,8 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 2035872529}
   SpriteRenderer: {fileID: 0}
-  Requirements: []
+  RequirementsSatisfied: 0
+  Stuck: 0
 --- !u!212 &771129156
 SpriteRenderer:
   serializedVersion: 2
@@ -1424,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 771129153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 0.13, z: 0}
+  m_LocalPosition: {x: 6.48, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1869,6 +1956,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1878603550622041200, guid: a7e7b3c81d4984446850c18fc7c62d3a, type: 3}
   m_PrefabInstance: {fileID: 1250868485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1283917366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283917368}
+  - component: {fileID: 1283917367}
+  m_Layer: 0
+  m_Name: Util
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1283917367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283917366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02e67050f121574aac779a2f935cf05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Util
+  WarningIcon: {fileID: 7390982415955834270, guid: 9f794b7872317694c99f469d81625332, type: 3}
+--- !u!4 &1283917368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283917366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295157442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +2032,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 601755908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1368830002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368830003}
+  - component: {fileID: 1368830004}
+  - component: {fileID: 1368830005}
+  m_Layer: 0
+  m_Name: NextToBed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1368830003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368830002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1472362638}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368830004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368830002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3d1032847aab046a922977588ea191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextToRequirement
+  Description: This chair needs to be next to a bed
+  NextToTag: bed
+  ReachCollider: {fileID: 1368830005}
+--- !u!61 &1368830005
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368830002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.595256, y: 0.7534771}
+  m_EdgeRadius: 0
 --- !u!4 &1378805653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3914572350633428940, guid: 3247abc916d61904db4e088b4190de69, type: 3}
@@ -2072,6 +2298,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 867391798}
+  - {fileID: 1368830003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1472362639
@@ -2090,8 +2317,8 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 867391798}
   SpriteRenderer: {fileID: 0}
-  Requirements:
-  - {fileID: 0}
+  RequirementsSatisfied: 0
+  Stuck: 0
   SpriteLeft: {fileID: 1409130810508493265, guid: 84ec739d0d08ed74886dd7b515e6668b, type: 3}
   SpriteRight: {fileID: 5943914605093948481, guid: 84ec739d0d08ed74886dd7b515e6668b, type: 3}
   SpriteUp: {fileID: 3684480955406458947, guid: 84ec739d0d08ed74886dd7b515e6668b, type: 3}
@@ -3784,3 +4011,4 @@ SceneRoots:
   - {fileID: 360238894}
   - {fileID: 989087049}
   - {fileID: 592549958}
+  - {fileID: 1283917368}
