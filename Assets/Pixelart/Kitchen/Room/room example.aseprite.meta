@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44275ad0f3bf507439f4f623172cd5fb
+guid: 7f5f3e39f40086d4cab1547971195d1e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: overview
+  - name: room example
     originalName: 
-    pivot: {x: 0.5045045, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 111
-      height: 126
-    spriteID: 6dcc8cdada96833439fb562a64e2b0d5
+      width: 80
+      height: 64
+    spriteID: b1568281eb697254993c2dfb20ff1c5b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3520129111
+      value0: 3030572431
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: overview
+    name: room example
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: overview
+    - name: room example
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 111
-        height: 126
-      spriteId: 6dcc8cdada96833439fb562a64e2b0d5
+        width: 80
+        height: 64
+      spriteId: b1568281eb697254993c2dfb20ff1c5b
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 112, y: 128}
-  previousTextureSize: {x: 128, y: 256}
+  canvasSize: {x: 80, y: 64}
+  previousTextureSize: {x: 128, y: 128}

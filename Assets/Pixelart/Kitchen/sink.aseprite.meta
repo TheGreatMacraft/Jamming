@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: sink
     originalName: 
-    pivot: {x: 0.53333336, y: 0}
+    pivot: {x: 0.55172414, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,7 +137,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 30
+      width: 29
       height: 54
     spriteID: 41c86e5699c88c94dad984ba29b0f3eb
     spriteBone: []
@@ -169,7 +169,7 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 0
-        width: 30
+        width: 29
         height: 54
       spriteId: 41c86e5699c88c94dad984ba29b0f3eb
     linkedCells: []
