@@ -17,10 +17,11 @@ public class Item : MonoBehaviour
     AutoSortOrder autoSortOrder;
 
     bool justDropped = false;
-    float stuckTimer = 1.0f;
-    [HideInInspector] public bool Stuck = false;
+    float stuckTimer = 2.0f;
+    public bool Stuck => justDropped && stuckTimer < 0.0f;
 
     GameObject warningFlash = null;
+    GameObject stuckWarningFlash = null;
 
     void Awake()
     {
@@ -47,11 +48,9 @@ public class Item : MonoBehaviour
         {
             stuckTimer -= Time.deltaTime;
 
-            if (stuckTimer < 0.0f)
+            if (Stuck && stuckWarningFlash == null)
             {
-                Stuck = true;
-                // TODO: kaj s tem
-                //Debug.Log("stuck " + gameObject.name);
+                stuckWarningFlash = Instantiate(Util.Instance.WarningIconRed, this.transform, false);
             }
         }
     }
@@ -62,6 +61,13 @@ public class Item : MonoBehaviour
         {
             justDropped = false;
             rigidbody.bodyType = RigidbodyType2D.Kinematic;
+
+            if (stuckWarningFlash != null)
+            {
+                Destroy(stuckWarningFlash);
+                stuckWarningFlash = null;
+            }
+
             RequirementManager.CheckAllRequirements();
         }
     }
@@ -85,6 +91,11 @@ public class Item : MonoBehaviour
             Destroy(warningFlash);
             warningFlash = null;
         }
+        if (stuckWarningFlash != null)
+        {
+            Destroy(stuckWarningFlash);
+            stuckWarningFlash = null;
+        }
 
         RequirementManager.CheckAllRequirements();
     }
@@ -100,12 +111,16 @@ public class Item : MonoBehaviour
 
         IsPlaced = true;
         justDropped = true;
+        stuckTimer = 2.0f;
 
         autoSortOrder.YOffset = 0.0f;
     }
 
     public void CheckRequirements()
     {
+        if (IsBeingCarried || justDropped)
+            return;
+
         bool all = true;
         foreach (Requirement req in GetComponentsInChildren<Requirement>())
         {

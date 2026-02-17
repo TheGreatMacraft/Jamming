@@ -24,6 +24,9 @@ public class WalkableSpaceRequirement : Requirement
         {
             if (collider.CompareTag("Player") || collider.transform.parent?.CompareTag("Player") == true)
                 continue;
+            if (collider == spaceNeededCollider)
+                continue;
+
             return false;
         }
         return true;
