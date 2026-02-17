@@ -7,9 +7,19 @@ public class RequirementManager : MonoBehaviour
 {
     public RequirementManager Instance;
 
+    public static List<Item> AllItems = new();
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    public static void CheckAllRequirements()
+    {
+        foreach (Item item in AllItems)
+        {
+            item.CheckRequirements();
+        }
     }
 
     /*

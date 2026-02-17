@@ -27,11 +27,18 @@ public class Item : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         autoSortOrder = GetComponent<AutoSortOrder>();
+
+        RequirementManager.AllItems.Add(this);
     }
 
     void Start()
     {
         CheckRequirements();
+    }
+
+    void OnDestroy()
+    {
+        RequirementManager.AllItems.Remove(this);
     }
 
     private void Update()
@@ -55,7 +62,7 @@ public class Item : MonoBehaviour
         {
             justDropped = false;
             rigidbody.bodyType = RigidbodyType2D.Kinematic;
-            CheckRequirements();
+            RequirementManager.CheckAllRequirements();
         }
     }
 
@@ -78,6 +85,8 @@ public class Item : MonoBehaviour
             Destroy(warningFlash);
             warningFlash = null;
         }
+
+        RequirementManager.CheckAllRequirements();
     }
 
     public void OnDrop()
@@ -95,7 +104,7 @@ public class Item : MonoBehaviour
         autoSortOrder.YOffset = 0.0f;
     }
 
-    private void CheckRequirements()
+    public void CheckRequirements()
     {
         bool all = true;
         foreach (Requirement req in GetComponentsInChildren<Requirement>())
