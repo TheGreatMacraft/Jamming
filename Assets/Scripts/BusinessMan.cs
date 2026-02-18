@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class BusinessMan : MonoBehaviour
 {
-    public GameObject[] ItemsToGive;
-    int itemGiveIndex = 0;
+    public ItemGroup[] ItemsToGive;
+    int itemGroupIndex = 0;
+
+    public TMP_Text ItemTodoText;
 
     public TMP_Text SpeachText;
     public Vector2 QuietMinMaxTime;
@@ -25,6 +27,7 @@ public class BusinessMan : MonoBehaviour
         animator = GetComponent<Animator>();
         player = FindFirstObjectByType<Player>();
         SpeachText.text = "";
+        ItemTodoText.text = "";
     }
 
     private void Update()
@@ -69,12 +72,27 @@ public class BusinessMan : MonoBehaviour
 
     public Item SpawnNewItem()
     {
-        if (itemGiveIndex >= ItemsToGive.Length)
+        while (itemGroupIndex < ItemsToGive.Length && ItemsToGive[itemGroupIndex].Count == 0)
+            itemGroupIndex++;
+
+        if (itemGroupIndex >= ItemsToGive.Length)
             return null;
 
-        GameObject go = Instantiate(ItemsToGive[itemGiveIndex], transform.position, Quaternion.identity);
-        itemGiveIndex++;
+        ItemGroup itemGroup = ItemsToGive[itemGroupIndex];
+        GameObject go = Instantiate(itemGroup.ItemPrefab, transform.position, Quaternion.identity);
+        itemGroup.Count -= 1;
+
+        ItemTodoText.text = itemGroup.UIText;
 
         return go.GetComponent<Item>();
     }
+}
+
+
+[System.Serializable]
+public class ItemGroup
+{
+    public GameObject ItemPrefab;
+    public int Count;
+    public string UIText;
 }
