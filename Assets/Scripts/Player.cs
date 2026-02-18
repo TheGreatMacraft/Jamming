@@ -161,14 +161,19 @@ public class Player : MonoBehaviour
 
     Vector2 GetItemDropPosition()
     {
-        Transform dropTransform = moveDirection switch
+        Vector2 direction = moveDirection switch
         {
-            MoveDirection.Left => ItemDropPositionLeft,
-            MoveDirection.Right => ItemDropPositionRight,
-            MoveDirection.Up => ItemDropPositionUp,
-            MoveDirection.Down => ItemDropPositionDown,
-            _ => null
+            MoveDirection.Left => Vector2.left,
+            MoveDirection.Right => Vector2.right,
+            MoveDirection.Up => Vector2.up,
+            MoveDirection.Down => Vector2.down,
+            _ => Vector2.zero
         };
-        return dropTransform.position;
+
+        direction.x *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.x;
+        direction.y *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.y / 2.0f;
+
+        Vector2 position = (Vector2)transform.position + direction;
+        return position;
     }
 }
