@@ -1,18 +1,29 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WalkableSpaceRequirement : Requirement
 {
-        Collider2D spaceNeededCollider;
+    public bool RequiredAll;
+
+    Collider2D[] spaceNeededColliders;
 
     List<Collider2D> queryResults = new();
 
     private void Awake()
     {
-        spaceNeededCollider = GetComponent<Collider2D>();
+        spaceNeededColliders = GetComponentsInChildren<Collider2D>();
     }
 
     public override bool IsSatisfied(Item item)
+    {
+        if (RequiredAll)
+            return spaceNeededColliders.All(CheckCollider);
+        else
+            return spaceNeededColliders.Any(CheckCollider);
+    }
+
+    private bool CheckCollider(Collider2D spaceNeededCollider)
     {
         ContactFilter2D contactFilter = new ContactFilter2D();
         contactFilter.useTriggers = false;
@@ -24,9 +35,6 @@ public class WalkableSpaceRequirement : Requirement
         {
             if (collider.CompareTag("Player") || collider.transform.parent?.CompareTag("Player") == true)
                 continue;
-            if (collider == spaceNeededCollider)
-                continue;
-
             return false;
         }
         return true;
