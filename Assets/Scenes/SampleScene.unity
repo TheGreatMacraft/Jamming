@@ -4138,7 +4138,7 @@ Transform:
   - {fileID: 1659512098}
   - {fileID: 206854957}
   - {fileID: 310224996}
-  - {fileID: 2015820961}
+  - {fileID: 2021104265}
   m_Father: {fileID: 2116399440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1440238535 stripped
@@ -7641,7 +7641,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2174183857599705876, guid: 694df1c8e01b2ca47bf472f16d3fb9b6, type: 3}
   m_PrefabInstance: {fileID: 1270138472}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2015820960
+--- !u!1 &2021104264
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7649,8 +7649,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2015820961}
-  - component: {fileID: 2015820962}
+  - component: {fileID: 2021104265}
+  - component: {fileID: 2021104266}
   m_Layer: 0
   m_Name: BottomWallCollider (1)
   m_TagString: Untagged
@@ -7658,13 +7658,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2015820961
+--- !u!4 &2021104265
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015820960}
+  m_GameObject: {fileID: 2021104264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.25, y: -12, z: 0}
@@ -7673,13 +7673,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1414881381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2015820962
+--- !u!61 &2021104266
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015820960}
+  m_GameObject: {fileID: 2021104264}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
