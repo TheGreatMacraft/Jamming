@@ -30,7 +30,7 @@ public class CarsOnRoad : MonoBehaviour
         
         SpawnCar(spawnOnLeft);
         
-        float spawnAfterTime = rnd.Next(timeUntilCar);
+        float spawnAfterTime = rnd.Next(timeUntilCar/2, timeUntilCar);
         
         yield return SpawnCarAfterDelay(spawnOnLeft, spawnAfterTime);
     }

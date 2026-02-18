@@ -1,11 +1,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DeleteCar : MonoBehaviour
+public class DeleteTag : MonoBehaviour
 {
+
+    public string tagToDelete;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("car"))
+        if (other.CompareTag(tagToDelete))
         {
             Destroy(other.gameObject);
         }

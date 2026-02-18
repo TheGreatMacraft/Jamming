@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NpcsOnPavement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeleteCar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DeleteTag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeleteCar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DeleteTag.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GDD_GameJam/GDD.md" beforeDir="false" afterPath="$PROJECT_DIR$/GDD_GameJam/GDD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +103,10 @@
       <workItem from="1771420708064" duration="2000" />
       <workItem from="1771420770662" duration="3162000" />
       <workItem from="1771424229705" duration="2872000" />
+      <workItem from="1771444976456" duration="3000" />
+      <workItem from="1771444989940" duration="7000" />
+      <workItem from="1771445012690" duration="1000" />
+      <workItem from="1771445802384" duration="1337000" />
     </task>
     <servers />
   </component>
