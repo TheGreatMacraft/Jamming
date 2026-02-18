@@ -30,7 +30,7 @@ public class NpcsOnPavement : MonoBehaviour
         
         SpawnNpc(spawnOnLeft);
         
-        float spawnAfterTime = rnd.Next(timeUntilNpc/2,timeUntilNpc);
+        float spawnAfterTime = rnd.Next(timeUntilNpc/8,timeUntilNpc);
         
         yield return SpawnNpcAfterDelay(spawnOnLeft, spawnAfterTime);
     }
