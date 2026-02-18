@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6543840950733067187}
   - component: {fileID: 5827139206328997201}
   - component: {fileID: 1556284942473766257}
-  - component: {fileID: 2775508229127729771}
   m_Layer: 0
   m_Name: CarOnRoad
   m_TagString: car
@@ -108,20 +107,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.6781278, y: 0.8917184}
   m_EdgeRadius: 0
---- !u!114 &2775508229127729771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227445402765987299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
-  UpdateEveryFrame: 1
 --- !u!1 &5210988875783626932
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2640859749843609963}
   - component: {fileID: 1920877438400929275}
+  - component: {fileID: 7127653721003453854}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -213,3 +199,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7127653721003453854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210988875783626932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
+  YOffset: 0
+  UpdateEveryFrame: 1

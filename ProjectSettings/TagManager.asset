@@ -10,6 +10,7 @@ TagManager:
   - table
   - counter
   - car
+  - laundry_machine
   layers:
   - Default
   - TransparentFX
