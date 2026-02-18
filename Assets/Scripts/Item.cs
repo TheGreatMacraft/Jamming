@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Item : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class Item : MonoBehaviour
 
     new Rigidbody2D rigidbody;
     AutoSortOrder[] autoSortOrders;
+    Collider2D[] colliders;
+
+    List<Collider2D> collisionTestResults = new();
 
     bool justDropped = false;
-    float stuckTimer = 2.0f;
+    float stuckTimer = 2.5f;
     public bool Stuck => justDropped && stuckTimer < 0.0f;
 
     GameObject warningFlash = null;
@@ -28,6 +32,7 @@ public class Item : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         autoSortOrders = GetComponentsInChildren<AutoSortOrder>(true);
+        colliders = GetComponentsInChildren<Collider2D>(true);
 
         RequirementManager.AllItems.Add(this);
     }
@@ -57,6 +62,36 @@ public class Item : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (justDropped && rigidbody.IsSleeping() == false)
+        {
+            bool allClear = true;
+            ContactFilter2D contactFilter = new ContactFilter2D();
+            contactFilter.useTriggers = false;
+
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.isActiveAndEnabled == false)
+                    continue;
+
+                collisionTestResults.Clear();
+                int count = Physics2D.OverlapCollider(collider, contactFilter, collisionTestResults);
+
+                foreach (var col in collisionTestResults)
+                {
+                    Debug.Log(col.gameObject.name);
+                }
+
+                if (collisionTestResults.Any(col => colliders.Contains(col) == false))
+                {
+                    allClear = false;
+                    break;
+                }
+            }
+
+            if (allClear)
+                rigidbody.Sleep();
+        }
+
         if (justDropped && rigidbody.IsSleeping())
         {
             justDropped = false;
@@ -77,7 +112,7 @@ public class Item : MonoBehaviour
         justDropped = false;
         rigidbody.bodyType = RigidbodyType2D.Kinematic;
         rigidbody.linearVelocity = Vector2.zero;
-        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>(true))
+        foreach (Collider2D collider in colliders)
         {
             if (collider.isTrigger == false)
                 collider.enabled = false;
@@ -105,7 +140,7 @@ public class Item : MonoBehaviour
     public void OnDrop()
     {
         rigidbody.bodyType = RigidbodyType2D.Dynamic;
-        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>(true))
+        foreach (Collider2D collider in colliders)
         {
             if (collider.isTrigger == false)
                 collider.enabled = true;
@@ -113,7 +148,7 @@ public class Item : MonoBehaviour
 
         IsPlaced = true;
         justDropped = true;
-        stuckTimer = 2.0f;
+        stuckTimer = 2.5f;
 
         foreach (AutoSortOrder order in autoSortOrders)
             order.YOffset = 0.0f;

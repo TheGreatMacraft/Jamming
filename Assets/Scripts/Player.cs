@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     public float MoveSpeed;
     public CircleCollider2D PickupReachCollider;
     public SpriteRenderer PlayerSpriteRenderer;
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        Instance = this;
     }
 
     void Update()
