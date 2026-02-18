@@ -99,6 +99,7 @@ public class Item : MonoBehaviour
         }
 
         RequirementManager.CheckAllRequirements();
+        RequirementManager.Instance.UpdateRequirementUI(GetComponentsInChildren<Requirement>());
     }
 
     public void OnDrop()
@@ -116,6 +117,8 @@ public class Item : MonoBehaviour
 
         foreach (AutoSortOrder order in autoSortOrders)
             order.YOffset = 0.0f;
+
+        RequirementManager.Instance.ClearRequirementUI();
     }
 
     public void CheckRequirements()
