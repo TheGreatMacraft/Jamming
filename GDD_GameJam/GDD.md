@@ -63,3 +63,9 @@ The game ends when the requirement is not meet in given time
 # Problem
 
 1. How to handle possible item clipping through walls/other items
+
+# ToDo
+
+- [ ] radio - volume controler UI
+- [ ] requirement UI
+- [ ] item prefab creation

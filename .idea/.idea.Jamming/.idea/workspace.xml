@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Music/hard at work.ceol" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Music/hard at work.ceol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/nightstand.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/nightstand.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/wardrobe.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/wardrobe.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Dining Room/table.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Dining Room/table.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/box.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/box.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallHorizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallHorizontal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallVertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallVertical.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GDD_GameJam/GDD.md" beforeDir="false" afterPath="$PROJECT_DIR$/GDD_GameJam/GDD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,20 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.7f1\Editor\Unity.exe" />
@@ -85,6 +95,7 @@
       <workItem from="1770971320644" duration="10000" />
       <workItem from="1771329877726" duration="36000" />
       <workItem from="1771397237610" duration="314000" />
+      <workItem from="1771411430703" duration="1855000" />
     </task>
     <servers />
   </component>
