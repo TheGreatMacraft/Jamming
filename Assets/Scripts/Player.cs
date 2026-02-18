@@ -108,7 +108,11 @@ public class Player : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.TryGetComponent<Item>(out Item item))
+            Item item = collider.GetComponent<Item>();
+            if (item == null && collider.transform.parent != null)
+                item = collider.transform.parent.GetComponent<Item>();
+
+            if (item != null)
             {
                 float distance = Vector2.Distance(item.transform.position, pickupCenter);
                 if (distance < closestDistance)

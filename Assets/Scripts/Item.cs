@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
     [HideInInspector] public bool RequirementsSatisfied;
 
     new Rigidbody2D rigidbody;
-    AutoSortOrder autoSortOrder;
+    AutoSortOrder[] autoSortOrders;
 
     bool justDropped = false;
     float stuckTimer = 2.0f;
@@ -23,11 +23,11 @@ public class Item : MonoBehaviour
     GameObject warningFlash = null;
     GameObject stuckWarningFlash = null;
 
-    void Awake()
+    protected virtual void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        autoSortOrder = GetComponent<AutoSortOrder>();
+        autoSortOrders = GetComponentsInChildren<AutoSortOrder>(true);
 
         RequirementManager.AllItems.Add(this);
     }
@@ -77,7 +77,7 @@ public class Item : MonoBehaviour
         justDropped = false;
         rigidbody.bodyType = RigidbodyType2D.Kinematic;
         rigidbody.linearVelocity = Vector2.zero;
-        foreach (Collider2D collider in GetComponents<Collider2D>())
+        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>(true))
         {
             if (collider.isTrigger == false)
                 collider.enabled = false;
@@ -85,7 +85,8 @@ public class Item : MonoBehaviour
 
         IsPlaced = false;
 
-        autoSortOrder.YOffset = -1.5f;
+        foreach (AutoSortOrder order in autoSortOrders)
+            order.YOffset = -1.5f;
         if (warningFlash != null)
         {
             Destroy(warningFlash);
@@ -103,7 +104,7 @@ public class Item : MonoBehaviour
     public void OnDrop()
     {
         rigidbody.bodyType = RigidbodyType2D.Dynamic;
-        foreach (Collider2D collider in GetComponents<Collider2D>())
+        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>(true))
         {
             if (collider.isTrigger == false)
                 collider.enabled = true;
@@ -113,7 +114,8 @@ public class Item : MonoBehaviour
         justDropped = true;
         stuckTimer = 2.0f;
 
-        autoSortOrder.YOffset = 0.0f;
+        foreach (AutoSortOrder order in autoSortOrders)
+            order.YOffset = 0.0f;
     }
 
     public void CheckRequirements()
