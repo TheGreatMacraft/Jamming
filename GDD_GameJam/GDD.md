@@ -59,3 +59,7 @@ The game ends when the requirement is not meet in given time
 - [ ] toilet
 - [x] sink
 
+
+# Problem
+
+1. How to handle possible item clipping through walls/other items
