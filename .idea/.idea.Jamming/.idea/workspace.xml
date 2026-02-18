@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcsOnPavement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcsOnPavement.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +95,7 @@
       <workItem from="1771444976456" duration="3000" />
       <workItem from="1771444989940" duration="7000" />
       <workItem from="1771445012690" duration="1000" />
-      <workItem from="1771445802384" duration="2484000" />
+      <workItem from="1771445802384" duration="2945000" />
     </task>
     <servers />
   </component>
