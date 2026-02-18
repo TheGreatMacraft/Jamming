@@ -121,7 +121,7 @@ public class Item : MonoBehaviour
         IsPlaced = false;
 
         foreach (AutoSortOrder order in autoSortOrders)
-            order.YOffset = -1.5f;
+            order.YOffset -= 1.5f;
         if (warningFlash != null)
         {
             Destroy(warningFlash);
@@ -151,7 +151,7 @@ public class Item : MonoBehaviour
         stuckTimer = 2.5f;
 
         foreach (AutoSortOrder order in autoSortOrders)
-            order.YOffset = 0.0f;
+            order.YOffset += 1.5f;
 
         RequirementManager.Instance.ClearRequirementUI();
     }
