@@ -9,6 +9,7 @@ TagManager:
   - movableWall
   - table
   - counter
+  - car
   layers:
   - Default
   - TransparentFX

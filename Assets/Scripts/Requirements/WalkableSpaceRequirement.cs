@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WalkableSpaceRequirement : Requirement
 {
-    Collider2D spaceNeededCollider;
+        Collider2D spaceNeededCollider;
 
     List<Collider2D> queryResults = new();
 

@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/nightstand.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/nightstand.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/wardrobe.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Bedroom/wardrobe.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Dining Room/table.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Dining Room/table.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/box.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/box.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallHorizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallHorizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallVertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ImmovableWallVertical.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GDD_GameJam/GDD.md" beforeDir="false" afterPath="$PROJECT_DIR$/GDD_GameJam/GDD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/overview.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/overview.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Requirements/WalkableSpaceRequirement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Requirements/WalkableSpaceRequirement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/floor_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/floor_0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/floor_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/floor_0.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DeleteCar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -96,6 +100,9 @@
       <workItem from="1771329877726" duration="36000" />
       <workItem from="1771397237610" duration="314000" />
       <workItem from="1771411430703" duration="1855000" />
+      <workItem from="1771420668667" duration="13000" />
+      <workItem from="1771420708064" duration="2000" />
+      <workItem from="1771420770662" duration="3162000" />
     </task>
     <servers />
   </component>

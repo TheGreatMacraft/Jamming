@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6035fb4aa90c53f45a1e6d111778db58
+guid: b9ec7903e7f58f54bad9ac53618025be
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639070216568819530
+  platformSettingsDirtyTick: 639070166923587968
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: car
+  - name: road_upside
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 20
-    spriteID: 172a65b305eb5b148ab7c5c86e60cd18
+      width: 16
+      height: 16
+    spriteID: 458bb896df2327c449003d32197e0d6d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,51 +148,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  spriteSheetImportData:
-  - name: car_0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 32
-      height: 20
-    spriteID: 6e3601596d1e07e44a26e96909608454
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
+  spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 696029512
+      value0: 31866513
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: car
+    name: road_upside
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: car
+    - name: road_upside
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 32
-        height: 20
-      spriteId: 172a65b305eb5b148ab7c5c86e60cd18
+        width: 16
+        height: 16
+      spriteId: 458bb896df2327c449003d32197e0d6d
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -226,5 +205,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 64, y: 32}
+  canvasSize: {x: 16, y: 16}
+  previousTextureSize: {x: 32, y: 32}

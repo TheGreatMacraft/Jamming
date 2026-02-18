@@ -161,7 +161,49 @@ ScriptedImporter:
       y: 4
       width: 16
       height: 16
-    spriteID: be2964609dcd9754bab36a1ab29b4051
+    spriteID: fc2fb12671b530b44a5a217a0af47b28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: floor_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 4
+      width: 16
+      height: 16
+    spriteID: f33a11be7d66bfa49b72336f50cb1540
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: floor_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 16
+      height: 16
+    spriteID: 02fceefe434b0574c96f8ac9d0f4fc42
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +232,7 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 0
-        width: 16
+        width: 48
         height: 16
       spriteId: 93cf3db25a2d7db46b1d6fd8e9ff1938
     linkedCells: []
@@ -226,5 +268,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
-  previousTextureSize: {x: 32, y: 32}
+  canvasSize: {x: 48, y: 16}
+  previousTextureSize: {x: 64, y: 32}
