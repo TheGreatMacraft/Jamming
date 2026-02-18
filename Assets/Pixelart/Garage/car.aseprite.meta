@@ -158,10 +158,52 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 60
       width: 32
       height: 20
     spriteID: 6e3601596d1e07e44a26e96909608454
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: car_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 32
+      width: 32
+      height: 20
+    spriteID: 58e2b78aa4ee56d4abe99180a9bc5a8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: car_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 32
+      height: 20
+    spriteID: de059cb1d15fca1439af6cbffdcfeffa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -184,7 +226,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: car
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -193,6 +235,24 @@ ScriptedImporter:
         width: 32
         height: 20
       spriteId: 172a65b305eb5b148ab7c5c86e60cd18
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 20
+      spriteId: 7892fbbe59ff6a941b10873b543be376
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 20
+      spriteId: 6b7be1829cc28ed4fa6d771f77f81f51
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -227,4 +287,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 64, y: 32}
+  previousTextureSize: {x: 64, y: 128}

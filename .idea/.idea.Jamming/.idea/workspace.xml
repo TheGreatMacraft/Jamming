@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Tile Palette.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Garage/car.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/Wall And Floor/floor.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/overview.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/overview.aseprite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Requirements/WalkableSpaceRequirement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Requirements/WalkableSpaceRequirement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/floor_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/floor_0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/floor_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/floor_0.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarsOnRoad.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +97,7 @@
       <workItem from="1771420668667" duration="13000" />
       <workItem from="1771420708064" duration="2000" />
       <workItem from="1771420770662" duration="3162000" />
+      <workItem from="1771424229705" duration="1146000" />
     </task>
     <servers />
   </component>

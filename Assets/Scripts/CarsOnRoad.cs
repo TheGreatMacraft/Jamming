@@ -8,6 +8,8 @@ public class CarsOnRoad : MonoBehaviour
 {
     public int timeUntilCar;
     public float carSpeed;
+
+    [SerializeField] public Sprite[] carSpirtes;
     
     Random rnd = new Random();
 
@@ -39,6 +41,9 @@ public class CarsOnRoad : MonoBehaviour
         
         GameObject newCar = Instantiate(car, carSpawnpoint.position, carSpawnpoint.rotation);
 
+        int spriteIndex = rnd.Next(carSpirtes.Length);
+        newCar.transform.Find("Model").GetComponent<SpriteRenderer>().sprite = carSpirtes[spriteIndex];
+        
         if (spawnOnLeft)
         {
             newCar.GetComponent<Rigidbody2D>().AddForce(transform.right * carSpeed);
