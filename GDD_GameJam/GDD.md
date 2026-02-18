@@ -21,43 +21,46 @@ As the game progresses, the requirements are harder to meet and will invoke pani
 
 The game ends when the requirement is not meet in given time
 
-# Art
+# Items
 
+- table
+- chair - next to table
+- bed - has space on at least 1 side except back
+- stool - next to counter
+- bathtub - has space on at least 1 side except back, has 1 side against blue wall
+- laundry basket - next to laundry machine
 
-## Dining room
-- [x] table
-- [x] chair
-- [x] stool
+## Has empty space in front
+- wardrobe
+- night cupboard - needs to be next to the bed
+- counter
+- kitchen sink - needs to have its back to the blue wall
+- stove - needs to have its back to the blue wall
+- fridge - needs to have its back to the blue wall
+- laundry machine - needs to have its back to the blue wall
+- bathroom sink - needs to have its back to the blue wall
+
 ---
+## Has empty space in front
+- piano - needs to have its back to the blue wall
+- toilet - needs to have its back to the blue wall, needs to be in the vicinity of the bathroom sink
+- drawer with tv - needs to have its back to the blue wall
+
 - [x] rug - cannot be placed where items already are
 
-## Bedroom
-- [x] wardrobe
-- [x] bed
-- [x] night cupboard
 ---
-- [ ] guitar
+- [ ] piano
 - [ ] gaming pc table
-- [ ] 
 
-## Garage
-- [ ] Car
 - [ ] table with drawers
----
 - [ ] squat rack
 - [ ] motorcycle
 - [ ] lawnmower
-- [x] boxes
 - [ ] weights
 
 
-## Bathroom
 - [ ] shower
-- [x] bathtub
-- [x] laundry machine
-- [x] laundry basket - must be near laundry machine
 - [ ] toilet
-- [x] sink
 
 
 # Problem
@@ -67,5 +70,4 @@ The game ends when the requirement is not meet in given time
 # ToDo
 
 - [ ] radio - volume controler UI
-- [ ] requirement UI
-- [ ] item prefab creation
+- [ ] define requirements for each item
