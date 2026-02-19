@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Chair.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Fridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Fridge.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GDD_GameJam/GDD.md" beforeDir="false" afterPath="$PROJECT_DIR$/GDD_GameJam/GDD.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <workItem from="1771445012690" duration="1000" />
       <workItem from="1771445802384" duration="3425000" />
       <workItem from="1771499367959" duration="2089000" />
-      <workItem from="1771507962416" duration="9725000" />
+      <workItem from="1771507962416" duration="12396000" />
     </task>
     <servers />
   </component>

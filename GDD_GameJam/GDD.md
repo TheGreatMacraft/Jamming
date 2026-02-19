@@ -45,6 +45,7 @@ The game ends when the requirement is not meet in given time
 - piano - needs to have its back to the blue wall
 - toilet - needs to have its back to the blue wall, needs to be in the vicinity of the bathroom sink
 - drawer with tv - needs to have its back to the blue wall
+- couch
 
 - [x] rug - cannot be placed where items already are
 
