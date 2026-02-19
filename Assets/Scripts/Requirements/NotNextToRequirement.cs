@@ -24,7 +24,7 @@ public class NotNextToRequirement : Requirement
 
         foreach (Collider2D collider in queryResults)
         {
-            if (collider.CompareTag(NotNextToTag) || collider.transform.parent?.CompareTag(NotNextToTag) == true)
+            if (Util.IsTagOnParent(collider.gameObject, NotNextToTag))
                 return false;
         }
         return true;

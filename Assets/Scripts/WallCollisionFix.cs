@@ -22,6 +22,14 @@ public class WallCollisionFix : MonoBehaviour
         item = GetComponentInParent<Item>();
     }
 
+    private void Start()
+    {
+        if (Horizontal)
+            playerAbove = Player.Instance.transform.position.x <= transform.position.x + YOffset;
+        else
+            playerAbove = Player.Instance.transform.position.y <= transform.position.y + YOffset;
+    }
+
     private void Update()
     {
         if (item != null && item.IsBeingCarried == true)

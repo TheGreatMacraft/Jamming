@@ -80,11 +80,6 @@ public class Item : MonoBehaviour
                 collisionTestResults.Clear();
                 int count = Physics2D.OverlapCollider(collider, contactFilter, collisionTestResults);
 
-                foreach (var col in collisionTestResults)
-                {
-                    Debug.Log(col.gameObject.name);
-                }
-
                 if (collisionTestResults.Any(col => colliders.Contains(col) == false))
                 {
                     allClear = false;

@@ -24,7 +24,7 @@ public class NextToRequirement : Requirement
 
         foreach (Collider2D collider in queryResults)
         {
-            if (collider.CompareTag(NextToTag) || collider.transform.parent?.CompareTag(NextToTag) == true)
+            if (Util.IsTagOnParent(collider.gameObject, NextToTag))
                 return true;
         }
         return false;

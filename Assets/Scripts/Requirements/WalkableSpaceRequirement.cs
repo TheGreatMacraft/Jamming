@@ -33,9 +33,19 @@ public class WalkableSpaceRequirement : Requirement
 
         foreach (Collider2D collider in queryResults)
         {
-            if (collider.CompareTag("Player") || collider.transform.parent?.CompareTag("Player") == true)
+            if (Util.IsTagOnParent(collider.gameObject, "Player"))
                 continue;
-            return false;
+
+            var wallCollider = collider.GetComponentInParent<WallCollisionFix>();
+            if (wallCollider != null && wallCollider.ColliderDefault != null)
+            {
+                if (wallCollider.ColliderDefault.bounds.Intersects(spaceNeededCollider.bounds))
+                    return false;
+            }
+            else
+            {
+                return false;
+            }
         }
         return true;
     }

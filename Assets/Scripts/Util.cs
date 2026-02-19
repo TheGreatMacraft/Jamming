@@ -11,4 +11,20 @@ public class Util : MonoBehaviour
     {
         Instance = this;
     }
+
+    public static bool IsTagOnParent(GameObject gameObject, string tag)
+    {
+        if (gameObject.CompareTag(tag))
+            return true;
+
+        Transform t = gameObject.transform;
+        while (t.parent != null)
+        {
+            t = t.parent;
+            if (t.gameObject.CompareTag(tag))
+                return true;
+        }
+
+        return false;
+    }
 }
