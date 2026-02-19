@@ -464,7 +464,7 @@ SpriteRenderer:
   m_Size: {x: 0.1, y: 0.11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &38396805 stripped
 Transform:
@@ -1008,7 +1008,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WallCollisionFix
   ColliderExtendedUp: {fileID: 545033287}
   ColliderExtendedDown: {fileID: 940954912}
+  ColliderDefault: {fileID: 0}
   YOffset: 1
+  Horizontal: 0
+  OnlyDefault: 0
 --- !u!1 &310981238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BusinessMan
   ItemsToGive:
+  - ItemPrefab: {fileID: 7749944290163338349, guid: 287395b00345d504483d6db0f8930ab6, type: 3}
+    Count: 6
+    UIText: Test walls
   - ItemPrefab: {fileID: 6675783764895666171, guid: d1d4ec8b8a72ae44e8bd1bdf8fad5644, type: 3}
     Count: 1
     UIText: Place a table anywhere in the apartment
@@ -2069,7 +2075,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8.234375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2803,7 +2809,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WallCollisionFix
   ColliderExtendedUp: {fileID: 1245130780}
   ColliderExtendedDown: {fileID: 574550019}
+  ColliderDefault: {fileID: 0}
   YOffset: 1
+  Horizontal: 0
+  OnlyDefault: 0
 --- !u!4 &717395449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1430495479984546848, guid: 9aff987b8993f674485903a63a158807, type: 3}

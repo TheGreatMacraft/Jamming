@@ -14,10 +14,6 @@ public class Player : MonoBehaviour
     public Animator PlayerAnimator;
 
     public Transform CarryPosition;
-    public Transform ItemDropPositionLeft;
-    public Transform ItemDropPositionRight;
-    public Transform ItemDropPositionUp;
-    public Transform ItemDropPositionDown;
 
     public SpriteRenderer PlaceholderSpriteRenderer;
 
@@ -47,12 +43,12 @@ public class Player : MonoBehaviour
 
         float weight = (carriedItem != null) ? carriedItem.Weight : 0.0f;
         float weightMultiplier = 1.0f - (weight/100.0f) * WeightSpeedReduction;
-        rigidbody.linearVelocity = input.normalized * MoveSpeed * weightMultiplier;
+        rigidbody.linearVelocity = MoveSpeed * weightMultiplier * input.normalized;
 
-        if (input.x > 0.5f) moveDirection = MoveDirection.Right;
-        else if (input.x < -0.5f) moveDirection = MoveDirection.Left;
         if (input.y > 0.5f) moveDirection = MoveDirection.Up;
         else if (input.y < -0.5f) moveDirection = MoveDirection.Down;
+        if (input.x > 0.5f) moveDirection = MoveDirection.Right;
+        else if (input.x < -0.5f) moveDirection = MoveDirection.Left;
 
         if (carriedItem != null)
         {
@@ -111,10 +107,7 @@ public class Player : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            Item item = collider.GetComponent<Item>();
-            if (item == null && collider.transform.parent != null)
-                item = collider.transform.parent.GetComponent<Item>();
-
+            Item item = collider.GetComponentInParent<Item>();
             if (item != null)
             {
                 float distance = Vector2.Distance(item.transform.position, pickupCenter);

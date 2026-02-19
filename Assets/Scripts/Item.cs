@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
 
     [HideInInspector] public bool IsPlaced = true;
     public bool IsBeingCarried => !IsPlaced;
+    public bool IsPlacedFixed => IsPlaced && !justDropped;
 
     public Transform PickupPosition;
     [HideInInspector] public SpriteRenderer SpriteRenderer;
@@ -33,6 +34,9 @@ public class Item : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
         autoSortOrders = GetComponentsInChildren<AutoSortOrder>(true);
         colliders = GetComponentsInChildren<Collider2D>(true);
+
+        foreach (AutoSortOrder order in autoSortOrders)
+            order.UpdateEveryFrame = false;
 
         RequirementManager.AllItems.Add(this);
     }
@@ -103,6 +107,9 @@ public class Item : MonoBehaviour
                 stuckWarningFlash = null;
             }
 
+            foreach (AutoSortOrder order in autoSortOrders)
+                order.UpdateEveryFrame = false;
+
             RequirementManager.CheckAllRequirements();
         }
     }
@@ -121,7 +128,10 @@ public class Item : MonoBehaviour
         IsPlaced = false;
 
         foreach (AutoSortOrder order in autoSortOrders)
+        {
             order.YOffset -= 1.5f;
+            order.UpdateEveryFrame = true;
+        }
         if (warningFlash != null)
         {
             Destroy(warningFlash);
