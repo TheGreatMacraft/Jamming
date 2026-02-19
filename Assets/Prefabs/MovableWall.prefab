@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -6
+  YOffset: 0
   UpdateEveryFrame: 1
 --- !u!114 &6372236852089978759
 MonoBehaviour:
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1.75
+  YOffset: 0
   UpdateEveryFrame: 1
 --- !u!61 &8987485149662820830
 BoxCollider2D:
