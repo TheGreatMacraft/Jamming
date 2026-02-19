@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PauseMenuManager : MonoBehaviour
@@ -25,14 +26,33 @@ public class PauseMenuManager : MonoBehaviour
         {
             UpdateButtons(1);
         }
+
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+            ButtonPressed();
     }
 
     private void UpdateButtons(int modifier)
     {
-        buttons[selectedButtonIndex].GetComponent<SpriteRenderer>().sprite = selectedButtonIndex == 2 ? redButton : blueButton;
+        buttons[selectedButtonIndex].GetComponent<Image>().sprite = selectedButtonIndex == 2 ? redButton : blueButton;
         
         selectedButtonIndex += modifier;
         
-        buttons[selectedButtonIndex].GetComponent<SpriteRenderer>().sprite = selectedButtonIndex == 2 ? redButtonHighlighted : blueButtonHighlighted;
+        buttons[selectedButtonIndex].GetComponent<Image>().sprite = selectedButtonIndex == 2 ? redButtonHighlighted : blueButtonHighlighted;
+    }
+
+    private void ButtonPressed()
+    {
+        switch (selectedButtonIndex)
+        {
+            case 0:
+                //Toggle Pause Menu
+                break;
+            case 1:
+                //Open Sound Menu
+                break;
+            case 2:
+                Application.Quit();
+                break;
+        }
     }
 }
