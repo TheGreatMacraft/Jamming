@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Music/hard at work.ceol" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Music/hard at work.ceol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Chair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Fridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Fridge.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,16 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Strange Places INC\Jamming.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Maks\Desktop\Strange Places INC" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Maks\GitHub\Jamming -debugCodeOptimization" />
@@ -106,7 +114,7 @@
       <workItem from="1771445012690" duration="1000" />
       <workItem from="1771445802384" duration="3425000" />
       <workItem from="1771499367959" duration="2089000" />
-      <workItem from="1771507962416" duration="7941000" />
+      <workItem from="1771507962416" duration="9725000" />
     </task>
     <servers />
   </component>

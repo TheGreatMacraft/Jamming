@@ -802,6 +802,10 @@ PrefabInstance:
       value: WalkableSpace
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: Description
+      value: Needs walkable space on one side, except back
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: RequiredAll
       value: 0
       objectReference: {fileID: 0}
@@ -989,6 +993,10 @@ PrefabInstance:
     - target: {fileID: 2815933546435741505, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Name
       value: WalkableSpace
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: Description
+      value: Needs walkable space on one side, except back
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: RequiredAll
@@ -1180,6 +1188,10 @@ PrefabInstance:
       value: WalkableSpace
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: Description
+      value: Needs walkable space on one side, except back
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: RequiredAll
       value: 0
       objectReference: {fileID: 0}
@@ -1367,6 +1379,10 @@ PrefabInstance:
     - target: {fileID: 2815933546435741505, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Name
       value: WalkableSpace
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: Description
+      value: Needs walkable space on one side, except back
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: RequiredAll

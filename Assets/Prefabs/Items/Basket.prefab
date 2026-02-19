@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3d1032847aab046a922977588ea191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextToRequirement
-  Description: The basket needs to be next to laundry machine
+  Description: Needs to be next to the laundry machine
   NextToTag: laundry_machine
 --- !u!58 &2756880803336822281
 CircleCollider2D:

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &6675783764895666171
 GameObject:
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1001 &329511685348703024
 PrefabInstance:
@@ -744,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 671287769621256110, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: Description
-      value: The chair needs to be next to a table
+      value: Needs to be next to a table
       objectReference: {fileID: 0}
     - target: {fileID: 1289227704279261693, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -788,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4353789720971474457, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_Name
-      value: NextToBed
+      value: NextTo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

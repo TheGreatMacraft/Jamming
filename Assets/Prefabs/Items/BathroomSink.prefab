@@ -1053,7 +1053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Needs walkable space on each side of the sink
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1135,7 +1135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Needswalkable space on each side of the sink
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1213,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Needs walkable space on each side of the sink
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1541,7 +1541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Needs walkable space on each side of the sink
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

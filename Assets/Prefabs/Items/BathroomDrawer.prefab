@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &6675783764895666171
 GameObject:
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1001 &3691471187359338927
 PrefabInstance:
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Need walkable space on each side of the wardrobe
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -881,7 +881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Need walkable space on each side of the wardrobe
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -959,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Need walkable space on each side of the wardrobe
+      value: Needs walkable space in front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1041,7 +1041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: Description
-      value: Need walkable space on each side of the wardrobe
+      value: Needs walkable space in front
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130171442501525653, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: RequiredAll
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

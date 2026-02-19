@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3d1032847aab046a922977588ea191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextToRequirement
-  Description: The stool needs to be next to the counter.
+  Description: Needs to be next to the counter
   NextToTag: counter
 --- !u!58 &2756880803336822281
 CircleCollider2D:
