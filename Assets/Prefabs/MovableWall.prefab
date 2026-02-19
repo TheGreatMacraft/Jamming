@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 100}
+  m_Size: {x: 6, y: 100}
   m_EdgeRadius: 0
 --- !u!1 &2845143277811036473
 GameObject:
@@ -313,7 +313,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 100}
+  m_Size: {x: 6, y: 100}
   m_EdgeRadius: 0
 --- !u!1 &6460088487050858318
 GameObject:
@@ -391,7 +391,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 100, y: 10}
+  m_Size: {x: 100, y: 6}
   m_EdgeRadius: 0
 --- !u!1 &6717969707380632021
 GameObject:
@@ -543,13 +543,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 4}
+    oldSize: {x: 6, y: 4}
     newSize: {x: 10, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.481382, y: 3.2638092}
+  m_Size: {x: 6, y: 3.2638092}
   m_EdgeRadius: 0
 --- !u!114 &5098084491675952572
 MonoBehaviour:
@@ -658,7 +658,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 0.5}
+  m_Size: {x: 6, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &6789637453392645398
 GameObject:
@@ -736,7 +736,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 10}
+  m_Size: {x: 0.5, y: 6}
   m_EdgeRadius: 0
 --- !u!1 &7451915030235635317
 GameObject:
@@ -814,7 +814,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 100, y: 10}
+  m_Size: {x: 100, y: 6}
   m_EdgeRadius: 0
 --- !u!1 &7749944290163338349
 GameObject:

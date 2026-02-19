@@ -65,7 +65,7 @@ The game ends when the requirement is not meet in given time
 
 # Problem
 
-	1. Items clipping on other side of the wall while being recently placed 
+1. Items clipping on other side of the wall while being recently placed 
 
 # ToDo
 

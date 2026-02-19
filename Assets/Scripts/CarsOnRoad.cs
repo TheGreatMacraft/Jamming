@@ -9,7 +9,7 @@ public class CarsOnRoad : MonoBehaviour
     public int timeUntilCar;
     public float carSpeed;
 
-    [SerializeField] public Sprite[] carSpirtes;
+    [SerializeField] private RuntimeAnimatorController[] animationControllers;
     
     Random rnd = new Random();
 
@@ -41,8 +41,8 @@ public class CarsOnRoad : MonoBehaviour
         
         GameObject newCar = Instantiate(car, carSpawnpoint.position, carSpawnpoint.rotation);
 
-        int spriteIndex = rnd.Next(carSpirtes.Length);
-        newCar.transform.Find("Model").GetComponent<SpriteRenderer>().sprite = carSpirtes[spriteIndex];
+        int spriteIndex = rnd.Next(animationControllers.Length);
+        newCar.transform.Find("Model").GetComponent<Animator>().runtimeAnimatorController = animationControllers[spriteIndex];
         
         if (spawnOnLeft)
         {
