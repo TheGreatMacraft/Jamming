@@ -452,3 +452,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c23ba2144f47e943b8bc1b4cc48f6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyEventReceiver
+  soundType: 0
+  volume: 1

@@ -6,6 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep3.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep3.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep4.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/footstep4.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3-shm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3-wal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music and Sound/Sound Effects/Walking/walkingSFX.aup3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#1.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#1.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#2.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#2.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#3.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/characters/npc#3.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CarOnRoad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomDrawer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/BathroomSink.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovableWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovableWall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Npc.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Requirements/WalkableSpace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Requirements/WalkableSpace.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BusinessMan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BusinessMan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyEventReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyEventReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +127,8 @@
       <workItem from="1771444989940" duration="7000" />
       <workItem from="1771445012690" duration="1000" />
       <workItem from="1771445802384" duration="3425000" />
+      <workItem from="1771499367959" duration="2089000" />
+      <workItem from="1771507962416" duration="4120000" />
     </task>
     <servers />
   </component>

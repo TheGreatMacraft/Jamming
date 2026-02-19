@@ -12,6 +12,7 @@ TagManager:
   - car
   - laundry_machine
   - npc
+  - blue_wall
   layers:
   - Default
   - TransparentFX

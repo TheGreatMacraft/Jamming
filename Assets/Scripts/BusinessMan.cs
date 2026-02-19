@@ -61,6 +61,9 @@ public class BusinessMan : MonoBehaviour
                 {
                     currentSpeachString = SpeachStrings[Random.Range(0, SpeachStrings.Length)];
                 }
+                
+                SoundManager.PlaySound(SoundType.BUSINESSMAN_TALKING, 1f);
+                
                 speaking = true;
                 SpeachText.text = currentSpeachString;
                 SpeachText.maxVisibleCharacters = 0;

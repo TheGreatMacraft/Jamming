@@ -43,12 +43,14 @@ public class SoundManager : MonoBehaviour
             soundDict[group.type] = group.sounds;
     }
 
-    public static void PlaySound(SoundType soundType, float volume = 1f)
+    public static void PlaySound(SoundType soundType, float volume = 1f, AudioSource newSource = null)
     {
         int soundCount = instance.soundDict[soundType].Count;
         
         int index = instance.rnd.Next(soundCount);
         
-        instance.audioSource.PlayOneShot(instance.soundDict[soundType][index],volume);
+        AudioSource source = newSource?? instance.audioSource;
+        
+        source.PlayOneShot(instance.soundDict[soundType][index], volume);
     }
 }
