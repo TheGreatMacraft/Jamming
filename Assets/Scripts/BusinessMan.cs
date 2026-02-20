@@ -8,9 +8,11 @@ public class BusinessMan : MonoBehaviour
     public string TalkPlayerGuideText;
     public string RequirementsNotOkText;
     public ItemGroup[] ItemsToGive;
-    int itemGroupIndex = 0;
-    int prevItemGroupIndex = -1;
+    int itemGroupIndex = -1;
+    ItemGroup currentItemGroup = null;
     int itemGroupTotalCount = 0;
+
+    public ItemGroup[] RandomlyPickedItems;
 
     public TMP_Text ItemTodoText;
 
@@ -86,47 +88,50 @@ public class BusinessMan : MonoBehaviour
 
     public Item SpawnNewItem()
     {
-        while (itemGroupIndex < ItemsToGive.Length && ItemsToGive[itemGroupIndex].Count == 0)
-            itemGroupIndex++;
-
-        if (itemGroupIndex >= ItemsToGive.Length)
-            return null;
-
-        if (itemGroupIndex > prevItemGroupIndex && RequirementManager.AllRequirementsSatisfied == false)
+        // ce je treba najti nov ItemGroup
+        if (currentItemGroup == null || currentItemGroup.Count == 0)
         {
-            ItemTodoText.text = RequirementsNotOkText;
-            return null;
+            if (RequirementManager.AllRequirementsSatisfied == false)
+            {
+                ItemTodoText.text = RequirementsNotOkText;
+                return null;
+            }
+
+            if (itemGroupIndex + 1 < ItemsToGive.Length)
+            {
+                itemGroupIndex++;
+                currentItemGroup = ItemsToGive[itemGroupIndex];
+            }
+            else
+            {
+                currentItemGroup = RandomlyPickedItems[Random.Range(0, RandomlyPickedItems.Length)].Copy();
+            }
+
+            itemGroupTotalCount = currentItemGroup.Count;
         }
 
-        ItemGroup itemGroup = ItemsToGive[itemGroupIndex];
-        GameObject go = Instantiate(itemGroup.ItemPrefab, transform.position, Quaternion.identity);
-
-        if (itemGroupIndex > prevItemGroupIndex)
-            itemGroupTotalCount = itemGroup.Count;
-
-        itemGroup.Count -= 1;
+        GameObject go = Instantiate(currentItemGroup.ItemPrefab, transform.position, Quaternion.identity);
+        currentItemGroup.Count -= 1;
 
         if (itemGroupTotalCount > 1)
         {
-            int num = itemGroupTotalCount - itemGroup.Count;
-            ItemTodoText.text = $"{itemGroup.UIText} ({num}/{itemGroupTotalCount})";
+            int num = itemGroupTotalCount - currentItemGroup.Count;
+            ItemTodoText.text = $"{currentItemGroup.UIText} ({num}/{itemGroupTotalCount})";
         }
         else
         {
-            ItemTodoText.text = itemGroup.UIText;
+            ItemTodoText.text = currentItemGroup.UIText;
         }
-
-        prevItemGroupIndex = itemGroupIndex;
 
         return go.GetComponent<Item>();
     }
 
     public void OnPlayerItemDrop()
     {
-        if (prevItemGroupIndex >= ItemsToGive.Length || prevItemGroupIndex < 0)
+        if (currentItemGroup == null)
             return;
 
-        if (ItemsToGive[itemGroupIndex].Count == 0 && RequirementManager.AllRequirementsSatisfied)
+        if (currentItemGroup.Count == 0 && RequirementManager.AllRequirementsSatisfied)
             ItemTodoText.text = TalkPlayerGuideText;
     }
 }
@@ -138,4 +143,9 @@ public class ItemGroup
     public GameObject ItemPrefab;
     public int Count;
     public string UIText;
+
+    public ItemGroup Copy()
+    {
+        return (ItemGroup)MemberwiseClone();
+    }
 }

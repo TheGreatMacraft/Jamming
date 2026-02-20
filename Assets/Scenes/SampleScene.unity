@@ -2085,8 +2085,8 @@ MonoBehaviour:
     Count: 2
     UIText: Place 2 bathroom drawers
   - ItemPrefab: {fileID: 7749944290163338349, guid: 287395b00345d504483d6db0f8930ab6, type: 3}
-    Count: 4
-    UIText: Place 4 blue walls
+    Count: 2
+    UIText: Place 2 blue walls
   - ItemPrefab: {fileID: 6675783764895666171, guid: fd030be079e5f3d498e472d7886b13a8, type: 3}
     Count: 2
     UIText: Place 2 kitchen sinks
@@ -2102,9 +2102,34 @@ MonoBehaviour:
   - ItemPrefab: {fileID: 6675783764895666171, guid: 94021fa8c1c771e4f8f715f2ff8b2bcd, type: 3}
     Count: 6
     UIText: Place 6 stools
-  - ItemPrefab: {fileID: 7749944290163338349, guid: 287395b00345d504483d6db0f8930ab6, type: 3}
-    Count: 6
-    UIText: Place 6 blue walls
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 1f1a1e3a643d2db47bc88395a4023107, type: 3}
+    Count: 4
+    UIText: Place 4 boxes
+  RandomlyPickedItems:
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 47c3c4744b84503439fe5ec1b2258992, type: 3}
+    Count: 2
+    UIText: Place 2 couches
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 9d83ec57c9bd8714ca9e012b287f3fa1, type: 3}
+    Count: 2
+    UIText: Place 2 fridges
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 94021fa8c1c771e4f8f715f2ff8b2bcd, type: 3}
+    Count: 2
+    UIText: Place 2 stools
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 3eb2fbe9a4269af46a5dbf7f49734956, type: 3}
+    Count: 4
+    UIText: Place 4 lamps
+  - ItemPrefab: {fileID: 6675783764895666171, guid: dcaea9c192846d44889eb428c736a8b2, type: 3}
+    Count: 1
+    UIText: Place the TV
+  - ItemPrefab: {fileID: 6675783764895666171, guid: c93da6a4478028f4b8b661733b556031, type: 3}
+    Count: 3
+    UIText: Place 3 chairs
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 201bc4e88c2e03b4594f5286cf468f3d, type: 3}
+    Count: 3
+    UIText: Place 3 toilets
+  - ItemPrefab: {fileID: 6675783764895666171, guid: 92a022dab8fef5c479190a444be908eb, type: 3}
+    Count: 2
+    UIText: Place 2 bathroom drawers
   - ItemPrefab: {fileID: 6675783764895666171, guid: 1f1a1e3a643d2db47bc88395a4023107, type: 3}
     Count: 4
     UIText: Place 4 boxes
