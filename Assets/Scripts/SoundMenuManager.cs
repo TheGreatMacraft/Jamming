@@ -51,9 +51,9 @@ public class SoundMenuManager : MonoBehaviour
         if (selectedElementIndex != 2 && frameCounter % checkSliderEveryXFrame == 0)
         {
             if (Keyboard.current.leftArrowKey.isPressed)
-                ButtonPressed(-1);
+                ButtonPressed(-3 * Time.deltaTime);
             if (Keyboard.current.rightArrowKey.isPressed)
-                ButtonPressed(1);
+                ButtonPressed(3 * Time.deltaTime);
         }
     }
 
@@ -79,16 +79,13 @@ public class SoundMenuManager : MonoBehaviour
         
     }
 
-    private void ButtonPressed(int modifier)
+    private void ButtonPressed(float modifier)
     {
         Vector3 scale = sliders[selectedElementIndex].transform.Find("Fill").transform.localScale;
         
-        float newScale = scale.x + modifier;
+        scale.x = Mathf.Clamp01(scale.x + modifier);
 
-        if (newScale >= 0 && newScale <= 100)
-            scale.x = newScale;
-        
-        audioSources[selectedElementIndex].volume = scale.x/100;
+        audioSources[selectedElementIndex].volume = Mathf.Pow(scale.x, 2.5f);
         sliders[selectedElementIndex].transform.Find("Fill").transform.localScale = scale;
     }
 }
