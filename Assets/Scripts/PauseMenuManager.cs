@@ -7,11 +7,15 @@ public class PauseMenuManager : MonoBehaviour
 {
     public GameObject[] buttons;
 
+    public GameObject soundMenu;
+
     public Sprite blueButton;
     public Sprite blueButtonHighlighted;
     
     public Sprite redButton;
     public Sprite redButtonHighlighted;
+    
+    public TogglePauseMenuManager togglePauseMenuManager;
 
     private int selectedButtonIndex = 0;
 
@@ -45,10 +49,11 @@ public class PauseMenuManager : MonoBehaviour
         switch (selectedButtonIndex)
         {
             case 0:
-                //Toggle Pause Menu
+                togglePauseMenuManager.TogglePauseMenu();
                 break;
             case 1:
-                //Open Sound Menu
+                soundMenu.SetActive(true);
+                this.gameObject.SetActive(false);
                 break;
             case 2:
                 Application.Quit();
