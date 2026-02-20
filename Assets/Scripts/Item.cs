@@ -188,4 +188,16 @@ public class Item : MonoBehaviour
             warningFlash = null;
         }
     }
+
+    public Vector2? ClosestPointOnCollider(Vector2 point)
+    {
+        if (IsBeingCarried)
+            return null;
+
+        return colliders
+            .Where(collider => !collider.isTrigger && collider.isActiveAndEnabled)
+            .Select(collider => collider.ClosestPoint(point))
+            .OrderBy(pointOnCollider => (pointOnCollider - point).sqrMagnitude)
+            .First();
+    }
 }
