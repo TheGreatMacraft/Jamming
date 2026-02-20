@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Item : MonoBehaviour
 {
     public float Weight;
+    public int Score;
 
     [HideInInspector] public bool IsPlaced = true;
     public bool IsBeingCarried => !IsPlaced;
@@ -23,7 +24,7 @@ public class Item : MonoBehaviour
         }
     }
 
-    public bool RequirementsSatisfied { get; private set; }
+    public bool RequirementsSatisfied { get; private set; } = false;
 
     new Rigidbody2D rigidbody;
     AutoSortOrder[] autoSortOrders;
@@ -183,6 +184,8 @@ public class Item : MonoBehaviour
         if (IsBeingCarried || justDropped)
             return;
 
+        bool prevRequirementsSatisfied = RequirementsSatisfied;
+
         bool all = true;
         foreach (Requirement req in GetComponentsInChildren<Requirement>())
         {
@@ -203,6 +206,11 @@ public class Item : MonoBehaviour
             Destroy(warningFlash);
             warningFlash = null;
         }
+
+        if (!prevRequirementsSatisfied && RequirementsSatisfied)
+            ScoreUI.Instance.AddScore(Score);
+        else if (prevRequirementsSatisfied && !RequirementsSatisfied)
+            ScoreUI.Instance.RemoveScore(Score);
     }
 
     public Vector2? ClosestPointOnCollider(Vector2 point)
