@@ -33,6 +33,14 @@ public class Player : MonoBehaviour
         Instance = this;
     }
 
+    private void OnDisable()
+    {
+        rigidbody.linearVelocity = Vector2.zero;
+
+        if (carriedItem == null) PlayerAnimator.Play("Idle");
+        else PlayerAnimator.Play("Squished Idle");
+    }
+
     void Update()
     {
         Vector2 input = new Vector2(0, 0);
