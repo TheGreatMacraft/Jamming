@@ -13,6 +13,16 @@ public class Item : MonoBehaviour
     public Transform PickupPosition;
     [HideInInspector] public SpriteRenderer SpriteRenderer;
 
+    private bool _isClosestItem;
+    public bool IsClosestItem
+    {
+        get => _isClosestItem;
+        set {
+            _isClosestItem = value;
+            if (value == false) SpriteRenderer.color = Color.white;
+        }
+    }
+
     public bool RequirementsSatisfied { get; private set; }
 
     new Rigidbody2D rigidbody;
@@ -61,6 +71,12 @@ public class Item : MonoBehaviour
             {
                 stuckWarningFlash = Instantiate(Util.Instance.WarningIconRed, this.transform, false);
             }
+        }
+
+        if (IsClosestItem)
+        {
+            float darken = Mathf.Sin(Time.time * 4.0f) * 0.07f + 0.85f;
+            SpriteRenderer.color = new Color(darken, darken, darken);
         }
     }
 

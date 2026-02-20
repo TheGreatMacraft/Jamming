@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     Item carriedItem = null;
     bool movedSincePickup = false;
     Vector2 originalPickupPosition;
+    Item prevClosestItem = null;
 
     MoveDirection moveDirection = MoveDirection.Right;
 
@@ -78,11 +79,27 @@ public class Player : MonoBehaviour
             movedSincePickup = true;
         PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && movedSincePickup);
 
+        Item closestItem = null;
+        if (carriedItem == null)
+        {
+            closestItem = FindClosestItem();
+            if (closestItem != prevClosestItem)
+            {
+                if (prevClosestItem != null) prevClosestItem.IsClosestItem = false;
+                if (closestItem != null) closestItem.IsClosestItem = true;
+            }
+            prevClosestItem = closestItem;
+        }
+        else
+        {
+            if (prevClosestItem != null) prevClosestItem.IsClosestItem = false;
+            prevClosestItem = null;
+        }
+
         if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (carriedItem == null)
             {
-                Item closestItem = FindClosestItem();
                 if (closestItem != null)
                     PickupItem(closestItem);
                 else
