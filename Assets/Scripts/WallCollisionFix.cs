@@ -10,6 +10,8 @@ public class WallCollisionFix : MonoBehaviour
     public bool Horizontal = false;
     public bool OnlyDefault = false;
 
+    public Bounds DefaultBounds { get; private set; }
+
     bool playerAbove;
     Item item;
 
@@ -17,7 +19,11 @@ public class WallCollisionFix : MonoBehaviour
     {
         ColliderExtendedUp.enabled = false;
         ColliderExtendedDown.enabled = false;
-        if (ColliderDefault != null) ColliderDefault.enabled = true;
+        if (ColliderDefault != null)
+        {
+            ColliderDefault.enabled = true;
+            DefaultBounds = ColliderDefault.bounds;
+        }
 
         item = GetComponentInParent<Item>();
     }

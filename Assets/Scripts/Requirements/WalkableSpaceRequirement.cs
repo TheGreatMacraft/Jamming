@@ -39,7 +39,7 @@ public class WalkableSpaceRequirement : Requirement
             var wallCollider = collider.GetComponentInParent<WallCollisionFix>();
             if (wallCollider != null && wallCollider.ColliderDefault != null)
             {
-                if (wallCollider.ColliderDefault.bounds.Intersects(spaceNeededCollider.bounds))
+                if (wallCollider.DefaultBounds.Intersects(spaceNeededCollider.bounds))
                     return false;
             }
             else
