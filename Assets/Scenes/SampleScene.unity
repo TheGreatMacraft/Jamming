@@ -1268,7 +1268,7 @@ MonoBehaviour:
   fillHighlighted: {fileID: -5204154429369411513, guid: 99b629dd4f778564b88ac7508ef508a4, type: 3}
   redButton: {fileID: -6483051114312629667, guid: b205310799fa3f646aaaa37e9d693a5b, type: 3}
   redButtonHighlighted: {fileID: -176010300729794449, guid: b205310799fa3f646aaaa37e9d693a5b, type: 3}
-  checkSliderEveryXFrame: 4
+  checkSliderEveryXFrame: 3
 --- !u!1 &254369550
 GameObject:
   m_ObjectHideFlags: 0
