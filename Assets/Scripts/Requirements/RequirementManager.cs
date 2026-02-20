@@ -12,6 +12,8 @@ public class RequirementManager : MonoBehaviour
     public RectTransform RequirementUIParent;
     public RectTransform RequirementUIElement;
 
+    public static bool AllRequirementsSatisfied { get; private set; } = true;
+
     private void Awake()
     {
         Instance = this;
@@ -20,10 +22,16 @@ public class RequirementManager : MonoBehaviour
 
     public static void CheckAllRequirements()
     {
+        bool all = true;
         foreach (Item item in AllItems)
         {
             item.CheckRequirements();
+
+            if (item.RequirementsSatisfied == false || item.IsPlacedFixed == false)
+                all = false;
         }
+
+        AllRequirementsSatisfied = all;
     }
 
     public void ClearRequirementUI()

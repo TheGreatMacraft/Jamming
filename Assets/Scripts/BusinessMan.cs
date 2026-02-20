@@ -3,8 +3,14 @@ using UnityEngine;
 
 public class BusinessMan : MonoBehaviour
 {
+    public static BusinessMan Instance;
+
+    public string TalkPlayerGuideText;
+    public string RequirementsNotOkText;
     public ItemGroup[] ItemsToGive;
     int itemGroupIndex = 0;
+    int prevItemGroupIndex = -1;
+    int itemGroupTotalCount = 0;
 
     public TMP_Text ItemTodoText;
 
@@ -22,12 +28,17 @@ public class BusinessMan : MonoBehaviour
     Animator animator;
     Player player;
 
+    private void Awake()
+    {
+        Instance = this;
+        animator = GetComponent<Animator>();
+    }
+
     private void Start()
     {
-        animator = GetComponent<Animator>();
         player = FindFirstObjectByType<Player>();
         SpeachText.text = "";
-        ItemTodoText.text = "";
+        ItemTodoText.text = TalkPlayerGuideText;
     }
 
     private void Update()
@@ -81,13 +92,42 @@ public class BusinessMan : MonoBehaviour
         if (itemGroupIndex >= ItemsToGive.Length)
             return null;
 
+        if (itemGroupIndex > prevItemGroupIndex && RequirementManager.AllRequirementsSatisfied == false)
+        {
+            ItemTodoText.text = RequirementsNotOkText;
+            return null;
+        }
+
         ItemGroup itemGroup = ItemsToGive[itemGroupIndex];
         GameObject go = Instantiate(itemGroup.ItemPrefab, transform.position, Quaternion.identity);
+
+        if (itemGroupIndex > prevItemGroupIndex)
+            itemGroupTotalCount = itemGroup.Count;
+
         itemGroup.Count -= 1;
 
-        ItemTodoText.text = itemGroup.UIText;
+        if (itemGroupTotalCount > 1)
+        {
+            int num = itemGroupTotalCount - itemGroup.Count;
+            ItemTodoText.text = $"{itemGroup.UIText} ({num}/{itemGroupTotalCount})";
+        }
+        else
+        {
+            ItemTodoText.text = itemGroup.UIText;
+        }
+
+        prevItemGroupIndex = itemGroupIndex;
 
         return go.GetComponent<Item>();
+    }
+
+    public void OnPlayerItemDrop()
+    {
+        if (prevItemGroupIndex >= ItemsToGive.Length || prevItemGroupIndex < 0)
+            return;
+
+        if (ItemsToGive[itemGroupIndex].Count == 0 && RequirementManager.AllRequirementsSatisfied)
+            ItemTodoText.text = TalkPlayerGuideText;
     }
 }
 

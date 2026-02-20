@@ -13,7 +13,7 @@ public class Item : MonoBehaviour
     public Transform PickupPosition;
     [HideInInspector] public SpriteRenderer SpriteRenderer;
 
-    [HideInInspector] public bool RequirementsSatisfied;
+    public bool RequirementsSatisfied { get; private set; }
 
     new Rigidbody2D rigidbody;
     AutoSortOrder[] autoSortOrders;
@@ -106,6 +106,7 @@ public class Item : MonoBehaviour
                 order.UpdateEveryFrame = false;
 
             RequirementManager.CheckAllRequirements();
+            BusinessMan.Instance.OnPlayerItemDrop();
         }
     }
 

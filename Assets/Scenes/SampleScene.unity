@@ -898,10 +898,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1102062590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -244.5, y: -50}
+  m_SizeDelta: {x: 489, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228203715
 MonoBehaviour:
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Place 5 chairs
+  m_text: Place 5 chairs (0/5)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81b02b21aa6333d42a3ed24f234efd35, type: 2}
   m_sharedMaterial: {fileID: 651087891360392695, guid: 81b02b21aa6333d42a3ed24f234efd35, type: 2}
@@ -1239,10 +1239,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1102062590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -244.5, y: -50}
+  m_SizeDelta: {x: 489, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254369552
 MonoBehaviour:
@@ -1888,6 +1888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54c35a81f6a88d4db8ecd2d2be19d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BusinessMan
+  TalkPlayerGuideText: Talk to your manager
+  RequirementsNotOkText: All item requirements must be satisfied
   ItemsToGive:
   - ItemPrefab: {fileID: 6675783764895666171, guid: d1d4ec8b8a72ae44e8bd1bdf8fad5644, type: 3}
     Count: 1
@@ -2591,7 +2593,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 7.015625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5144,7 +5146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1102062590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5547,7 +5549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1249130363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5566,7 +5568,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 233.14148, y: -384}
-  m_SizeDelta: {x: 466.2767, y: 100}
+  m_SizeDelta: {x: 466.2767, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249130364
 MonoBehaviour:
@@ -11612,7 +11614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_AnchorMin.x
@@ -11620,11 +11622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 466.2767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11660,11 +11662,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 233.13835
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527771014736269656, guid: e0c15e6d17f0c68458b1e245a8a87318, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
