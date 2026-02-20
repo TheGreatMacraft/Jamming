@@ -747,7 +747,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Size.x
-      value: 1.7279406
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Size.y
@@ -755,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.x
-      value: 0.43927526
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.y
@@ -1016,7 +1016,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.003814, y: 0.41359842}
+  m_Size: {x: 1.8952194, y: 0.41359842}
   m_EdgeRadius: 0
 --- !u!1001 &2508628417393648553
 PrefabInstance:
@@ -1153,7 +1153,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Size.x
-      value: 1.7279406
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Size.y
@@ -1161,7 +1161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.x
-      value: 0.43927526
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.y
@@ -1339,7 +1339,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.003814, y: 0.41359842}
+  m_Size: {x: 1.9027991, y: 0.41359842}
   m_EdgeRadius: 0
 --- !u!4 &4600709265657567496 stripped
 Transform:

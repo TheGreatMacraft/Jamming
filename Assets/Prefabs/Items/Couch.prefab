@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1.1
+  YOffset: -0.9
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1.1
+  YOffset: -0.9
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1.1
+  YOffset: -0.9
   UpdateEveryFrame: 1
 --- !u!1 &6675783764895666171
 GameObject:
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1.1
+  YOffset: -0.9
   UpdateEveryFrame: 1
 --- !u!1001 &568228428012415057
 PrefabInstance:
