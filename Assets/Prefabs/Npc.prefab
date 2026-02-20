@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2062684901687662375}
   - component: {fileID: 2984834240746366710}
   - component: {fileID: 4911655991836021233}
+  - component: {fileID: 936040242436478195}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -349,3 +350,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &936040242436478195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567830952455929837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0d59c67ec847a980de266a01424a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VolumeChangeSFX

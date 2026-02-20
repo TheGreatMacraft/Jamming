@@ -21,14 +21,14 @@ public class SoundGroup
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    private static SoundManager instance;
+    public static SoundManager instance;
     
     private Random rnd = new Random();
 
     [SerializeField] private List<SoundGroup> soundGroups;
     private Dictionary<SoundType, List<AudioClip>> soundDict;
     
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Awake()
     {
