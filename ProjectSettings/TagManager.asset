@@ -13,6 +13,9 @@ TagManager:
   - laundry_machine
   - npc
   - blue_wall
+  - sink
+  - lamp
+  - TV
   layers:
   - Default
   - TransparentFX
