@@ -76,12 +76,19 @@ public class Player : MonoBehaviour
             movedSincePickup = true;
         PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && movedSincePickup);
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (carriedItem == null)
+            {
                 PickupClosestItem();
+
+                if (carriedItem == null)
+                    TalkToBusinessMan();
+            }
             else
+            {
                 DropItem();
+            }
         }
 
         if (input == Vector2.zero && carriedItem == null) PlayerAnimator.Play("Idle");
@@ -91,17 +98,6 @@ public class Player : MonoBehaviour
 
         if (moveDirection == MoveDirection.Left) PlayerSpriteRenderer.flipX = true;
         else if (moveDirection == MoveDirection.Right) PlayerSpriteRenderer.flipX = false;
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            BusinessMan bman = FindFirstObjectByType<BusinessMan>();
-            if (Vector2.Distance(bman.transform.position, transform.position) < PickupReachCollider.radius)
-            {
-                Item item = bman.SpawnNewItem();
-                if (item != null)
-                    PickupItem(item);
-            }
-        }
     }
 
     void PickupClosestItem()
@@ -176,5 +172,16 @@ public class Player : MonoBehaviour
 
         Vector2 position = (Vector2)transform.position + direction;
         return position;
+    }
+
+    void TalkToBusinessMan()
+    {
+        BusinessMan bman = FindFirstObjectByType<BusinessMan>();
+        if (Vector2.Distance(bman.transform.position, transform.position) < PickupReachCollider.radius)
+        {
+            Item item = bman.SpawnNewItem();
+            if (item != null)
+                PickupItem(item);
+        }
     }
 }

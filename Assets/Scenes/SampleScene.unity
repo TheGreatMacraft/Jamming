@@ -2593,7 +2593,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.6770835
+  orthographic size: 7.0833335
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6044,8 +6044,8 @@ MonoBehaviour:
   silencePadding: 0.25
   introClip: {fileID: 8300000, guid: e890a6c19e9b55f4dbb3d0884833cdbb, type: 3}
   loopClip: {fileID: 8300000, guid: b8650b3ab89f72f49a15697f084ccc30, type: 3}
-  introSource: {fileID: 1403483081}
-  loopSource: {fileID: 1403483083}
+  introSource: {fileID: 1403483083}
+  loopSource: {fileID: 1403483081}
 --- !u!82 &1403483081
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7342,6 +7342,18 @@ PrefabInstance:
     - target: {fileID: 6675783764895666171, guid: 763cab07d7c0f39448c9445c71cae35e, type: 3}
       propertyPath: m_Name
       value: Bathtub
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436027581407705502, guid: 763cab07d7c0f39448c9445c71cae35e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436027581407705502, guid: 763cab07d7c0f39448c9445c71cae35e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436027581407705502, guid: 763cab07d7c0f39448c9445c71cae35e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
