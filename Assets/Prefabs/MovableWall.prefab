@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -3
   UpdateEveryFrame: 1
 --- !u!114 &6372236852089978759
 MonoBehaviour:
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1.75
   UpdateEveryFrame: 1
 --- !u!61 &8987485149662820830
 BoxCollider2D:
@@ -549,7 +549,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6, y: 3.2638092}
+  m_Size: {x: 6.489827, y: 3.2638092}
   m_EdgeRadius: 0
 --- !u!114 &5098084491675952572
 MonoBehaviour:
@@ -868,7 +868,6 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 2351920816717722311}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 4386430360672268835}
   SpriteRight: {fileID: 4386430360672268835}
   SpriteUp: {fileID: 4178947305246981243}

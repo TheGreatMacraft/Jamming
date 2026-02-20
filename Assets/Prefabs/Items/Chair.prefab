@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -0.75
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -0.75
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -0.75
   UpdateEveryFrame: 1
 --- !u!1 &6675783764895666171
 GameObject:
@@ -545,7 +545,6 @@ MonoBehaviour:
   IsPlaced: 1
   PickupPosition: {fileID: 6044871934233375119}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 8840668570911797737}
   SpriteRight: {fileID: 9125702575864975881}
   SpriteUp: {fileID: 2261026386505624079}
@@ -728,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -0.75
   UpdateEveryFrame: 1
 --- !u!1001 &329511685348703024
 PrefabInstance:
@@ -752,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289227704279261693, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.113
       objectReference: {fileID: 0}
     - target: {fileID: 1289227704279261693, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -785,6 +784,10 @@ PrefabInstance:
     - target: {fileID: 1289227704279261693, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766494172034618743, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
+      propertyPath: m_Radius
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4353789720971474457, guid: 70f758dce0fea534aa3c42a17631bef4, type: 3}
       propertyPath: m_Name

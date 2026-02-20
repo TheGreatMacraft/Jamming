@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.3
   UpdateEveryFrame: 1
 --- !u!1 &1317183485995173720
 GameObject:
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.3
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 6121966631042693577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8125, z: 0}
+  m_LocalPosition: {x: 0, y: -0.503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 6675783764895666171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: 1.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -540,11 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848bb26d7d2004d89bb4102311d09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateableItem
-  Weight: 60
+  Weight: 50
   IsPlaced: 1
   PickupPosition: {fileID: 6044871934233375119}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 1331428969770619001}
   SpriteRight: {fileID: 9125702575864975881}
   SpriteUp: {fileID: 252451385074825088}
@@ -727,5 +726,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -1
   UpdateEveryFrame: 1

@@ -520,7 +520,7 @@ Transform:
   m_GameObject: {fileID: 6675783764895666171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: 1.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -543,11 +543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848bb26d7d2004d89bb4102311d09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateableItem
-  Weight: 20
+  Weight: 40
   IsPlaced: 1
   PickupPosition: {fileID: 6044871934233375119}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 5587837521695297369}
   SpriteRight: {fileID: 9125702575864975881}
   SpriteUp: {fileID: 2261026386505624079}

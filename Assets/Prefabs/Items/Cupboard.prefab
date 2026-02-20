@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.5
   UpdateEveryFrame: 1
 --- !u!1 &1317183485995173720
 GameObject:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.5
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.5
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -544,11 +544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848bb26d7d2004d89bb4102311d09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateableItem
-  Weight: 20
+  Weight: 35
   IsPlaced: 1
   PickupPosition: {fileID: 6044871934233375119}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 8130301296604621227}
   SpriteRight: {fileID: 9125702575864975881}
   SpriteUp: {fileID: 2261026386505624079}
@@ -732,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: 0
+  YOffset: -0.5
   UpdateEveryFrame: 1
 --- !u!1001 &672062365949474235
 PrefabInstance:

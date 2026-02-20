@@ -125,7 +125,7 @@ public class Item : MonoBehaviour
 
         foreach (AutoSortOrder order in autoSortOrders)
         {
-            order.YOffset -= 1.5f;
+            order.YOffset -= 0.5f;
             order.UpdateEveryFrame = true;
         }
         if (warningFlash != null)
@@ -157,7 +157,7 @@ public class Item : MonoBehaviour
         stuckTimer = 2.5f;
 
         foreach (AutoSortOrder order in autoSortOrders)
-            order.YOffset += 1.5f;
+            order.YOffset += 0.5f;
 
         RequirementManager.Instance.ClearRequirementUI();
     }

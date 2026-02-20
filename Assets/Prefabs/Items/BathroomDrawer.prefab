@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -1.25
   UpdateEveryFrame: 1
 --- !u!1 &1811232877624973545
 GameObject:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -1.25
   UpdateEveryFrame: 1
 --- !u!1 &6121966631042693577
 GameObject:
@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 6121966631042693577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8125, z: 0}
+  m_LocalPosition: {x: 0, y: -0.958, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -1.25
   UpdateEveryFrame: 1
 --- !u!1 &6675783764895666171
 GameObject:
@@ -520,7 +520,7 @@ Transform:
   m_GameObject: {fileID: 6675783764895666171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: 1.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -543,11 +543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848bb26d7d2004d89bb4102311d09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateableItem
-  Weight: 20
+  Weight: 40
   IsPlaced: 1
   PickupPosition: {fileID: 6044871934233375119}
   SpriteRenderer: {fileID: 0}
-  RequirementsSatisfied: 0
   SpriteLeft: {fileID: 8840668570911797737}
   SpriteRight: {fileID: 9125702575864975881}
   SpriteUp: {fileID: 2261026386505624079}
@@ -731,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6075e8ff118d4e4cbc4c90a68c241d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSortOrder
-  YOffset: -1
+  YOffset: -1.25
   UpdateEveryFrame: 1
 --- !u!1001 &3691471187359338927
 PrefabInstance:
@@ -832,6 +831,10 @@ PrefabInstance:
       value: 0.96373963
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.y
       value: 0.018130183
       objectReference: {fileID: 0}
@@ -910,6 +913,10 @@ PrefabInstance:
       value: 0.96373963
       objectReference: {fileID: 0}
     - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393662721827430539, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_Offset.y
       value: 0.018130183
       objectReference: {fileID: 0}
@@ -919,7 +926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451615499663657005, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.11
+      value: -2.036
       objectReference: {fileID: 0}
     - target: {fileID: 451615499663657005, guid: 16867d00c64a6f84b91e0ea4c0e8a931, type: 3}
       propertyPath: m_LocalPosition.z
