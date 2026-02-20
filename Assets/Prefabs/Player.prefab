@@ -324,6 +324,7 @@ GameObject:
   - component: {fileID: 6695513754846023667}
   - component: {fileID: 4031745695039368559}
   - component: {fileID: 7869060234708977696}
+  - component: {fileID: 5757034228738362283}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -552,3 +553,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5757034228738362283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613125668216771452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0d59c67ec847a980de266a01424a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VolumeChangeSFX

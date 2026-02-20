@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5827139206328997201}
   - component: {fileID: 1556284942473766257}
   - component: {fileID: 5149767400920890930}
+  - component: {fileID: 4978048038249647955}
   m_Layer: 0
   m_Name: CarOnRoad
   m_TagString: car
@@ -207,6 +208,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4978048038249647955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227445402765987299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0d59c67ec847a980de266a01424a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VolumeChangeSFX
 --- !u!1 &2044441415942832460
 GameObject:
   m_ObjectHideFlags: 0
