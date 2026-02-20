@@ -3,13 +3,15 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
 
     public float MoveSpeed;
-    public CircleCollider2D PickupReachCollider;
+    public float PickupReach;
+    public Vector2 PickupCenterOffset;
     public SpriteRenderer PlayerSpriteRenderer;
     public Animator PlayerAnimator;
 
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     Item carriedItem = null;
     bool movedSincePickup = false;
     Vector2 originalPickupPosition;
+    Item prevClosestItem = null;
 
     MoveDirection moveDirection = MoveDirection.Right;
 
@@ -76,13 +79,30 @@ public class Player : MonoBehaviour
             movedSincePickup = true;
         PlaceholderSpriteRenderer.enabled = (input == Vector2.zero && movedSincePickup);
 
+        Item closestItem = null;
+        if (carriedItem == null)
+        {
+            closestItem = FindClosestItem();
+            if (closestItem != prevClosestItem)
+            {
+                if (prevClosestItem != null) prevClosestItem.IsClosestItem = false;
+                if (closestItem != null) closestItem.IsClosestItem = true;
+            }
+            prevClosestItem = closestItem;
+        }
+        else
+        {
+            if (prevClosestItem != null) prevClosestItem.IsClosestItem = false;
+            prevClosestItem = null;
+        }
+
         if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (carriedItem == null)
             {
-                PickupClosestItem();
-
-                if (carriedItem == null)
+                if (closestItem != null)
+                    PickupItem(closestItem);
+                else
                     TalkToBusinessMan();
             }
             else
@@ -100,11 +120,11 @@ public class Player : MonoBehaviour
         else if (moveDirection == MoveDirection.Right) PlayerSpriteRenderer.flipX = false;
     }
 
-    void PickupClosestItem()
+    Item FindClosestItem()
     {
-        Vector2 pickupLocalCenter = (Vector2)PickupReachCollider.transform.localPosition + PickupReachCollider.offset;
-        Vector2 pickupCenter = PickupReachCollider.localToWorldMatrix.MultiplyPoint(pickupLocalCenter);
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(pickupCenter, PickupReachCollider.radius);
+        Vector2 direction = GetLookDirection();
+        Vector2 pickupCenter = (Vector2)transform.position + PickupCenterOffset + direction * 0.8f;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(pickupCenter, PickupReach);
 
         Item closestItem = null;
         float closestDistance = Mathf.Infinity;
@@ -114,7 +134,11 @@ public class Player : MonoBehaviour
             Item item = collider.GetComponentInParent<Item>();
             if (item != null)
             {
-                float distance = Vector2.Distance(item.transform.position, pickupCenter);
+                Vector2? pointOnCollider = item.ClosestPointOnCollider(pickupCenter);
+                if (pointOnCollider == null)
+                    continue;
+
+                float distance = (pointOnCollider.Value - pickupCenter).sqrMagnitude;
                 if (distance < closestDistance)
                 {
                     closestDistance = distance;
@@ -123,8 +147,9 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (closestItem != null)
-            PickupItem(closestItem);
+        return closestItem;
+        //if (closestItem != null)
+        //    PickupItem(closestItem);
     }
 
     void PickupItem(Item item)
@@ -158,6 +183,16 @@ public class Player : MonoBehaviour
 
     Vector2 GetItemDropPosition()
     {
+        Vector2 direction = GetLookDirection();
+        direction.x *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.x;
+        direction.y *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.y / 2.0f;
+
+        Vector2 position = (Vector2)transform.position + direction;
+        return position;
+    }
+
+    Vector2 GetLookDirection()
+    {
         Vector2 direction = moveDirection switch
         {
             MoveDirection.Left => Vector2.left,
@@ -166,22 +201,40 @@ public class Player : MonoBehaviour
             MoveDirection.Down => Vector2.down,
             _ => Vector2.zero
         };
-
-        direction.x *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.x;
-        direction.y *= 1.2f + carriedItem.SpriteRenderer.bounds.extents.y / 2.0f;
-
-        Vector2 position = (Vector2)transform.position + direction;
-        return position;
+        return direction;
     }
 
     void TalkToBusinessMan()
     {
         BusinessMan bman = FindFirstObjectByType<BusinessMan>();
-        if (Vector2.Distance(bman.transform.position, transform.position) < PickupReachCollider.radius)
+        if (Vector2.Distance(bman.transform.position, (Vector2)transform.position + PickupCenterOffset) < PickupReach)
         {
             Item item = bman.SpawnNewItem();
             if (item != null)
                 PickupItem(item);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector2 direction = GetLookDirection();
+        Vector2 pickupCenter = (Vector2)transform.position + PickupCenterOffset + direction * 0.8f;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(pickupCenter, PickupReach);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(pickupCenter, PickupReach);
+
+
+        foreach (Collider2D collider in colliders)
+        {
+            Item item = collider.GetComponentInParent<Item>();
+            if (item != null)
+            {
+                Vector2? pointOnCollider = item.ClosestPointOnCollider(pickupCenter);
+                if (pointOnCollider == null)
+                    continue;
+                Gizmos.color = Color.red;
+                Gizmos.DrawSphere(pointOnCollider.Value, 0.1f);
+            }
         }
     }
 }
