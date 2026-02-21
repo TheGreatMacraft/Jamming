@@ -28,7 +28,6 @@ public class BusinessMan : MonoBehaviour
     string currentSpeachString;
 
     Animator animator;
-    Player player;
 
     private void Awake()
     {
@@ -38,7 +37,6 @@ public class BusinessMan : MonoBehaviour
 
     private void Start()
     {
-        player = FindFirstObjectByType<Player>();
         SpeachText.text = "";
         ItemTodoText.text = TalkPlayerGuideText;
     }
@@ -67,7 +65,7 @@ public class BusinessMan : MonoBehaviour
         {
             speachTimer -= Time.deltaTime;
 
-            if (speachTimer <= 0.0f && Vector2.Distance(player.transform.position, transform.position) < 6.0f)
+            if (speachTimer <= 0.0f && Vector2.Distance(Player.Instance.transform.position, transform.position) < 6.0f)
             {
                 string oldSpeachString = currentSpeachString;
                 for (int i = 0; i < 20 && oldSpeachString == currentSpeachString; i++)

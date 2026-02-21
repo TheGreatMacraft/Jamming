@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
 
     void TalkToBusinessMan()
     {
-        BusinessMan bman = FindFirstObjectByType<BusinessMan>();
+        BusinessMan bman = BusinessMan.Instance;
         if (Vector2.Distance(bman.transform.position, (Vector2)transform.position + PickupCenterOffset) < PickupReach)
         {
             Item item = bman.SpawnNewItem();

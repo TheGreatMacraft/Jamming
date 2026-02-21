@@ -18,6 +18,7 @@ public class TogglePauseMenuManager : MonoBehaviour
     public void TogglePauseMenu()
     {
         playerScript.enabled = !playerScript.enabled;
+        Timer.Instance.enabled = !Timer.Instance.enabled;
         
         if (soundMenu.activeSelf)
         {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer Instance;
+
     public TextMeshProUGUI timerText;
 
     public int gameMinutes;
@@ -16,6 +18,8 @@ public class Timer : MonoBehaviour
     {
         gameSecondsLeft = gameMinutes * 60;
         //gameSecondsLeft = 40;
+
+        Instance = this;
         UpdateTimer();
     }
 
