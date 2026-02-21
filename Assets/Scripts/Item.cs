@@ -77,7 +77,8 @@ public class Item : MonoBehaviour
         if (IsClosestItem)
         {
             float darken = Mathf.Sin(Time.time * 4.0f) * 0.07f + 0.83f;
-            SpriteRenderer.color = new Color(darken, darken, darken);
+            Color color = SpriteRenderer.color;
+            SpriteRenderer.color = new Color(darken, darken, darken, color.a);
         }
     }
 

@@ -18,7 +18,7 @@ public class ScoreUI : MonoBehaviour
 
     private void Start()
     {
-        ScoreText.text = "score: " + CurrentScore;
+        ScoreText.text = $"$ {CurrentScore} $";
     }
 
     public void AddScore(int amount)
@@ -26,14 +26,14 @@ public class ScoreUI : MonoBehaviour
         if (amount <= 0)
             return;
         CurrentScore += amount;
-        ScoreText.text = "score: " + CurrentScore;
+        ScoreText.text = $"$ {CurrentScore} $";
 
         ScoreText.ForceMeshUpdate();
         LayoutRebuilder.ForceRebuildLayoutImmediate(ScoreText.rectTransform);
 
         GameObject popup = Instantiate(ScorePopupPrefab, transform);
         popup.GetComponent<RectTransform>().anchoredPosition = ScoreText.rectTransform.offsetMax;
-        popup.GetComponent<TMP_Text>().text = "+" + amount;
+        popup.GetComponent<TMP_Text>().text = $"+{amount}$";
         Destroy(popup, 0.5f);
     }
 
@@ -42,6 +42,6 @@ public class ScoreUI : MonoBehaviour
         if (amount <= 0)
             return;
         CurrentScore -= amount;
-        ScoreText.text = "score: " + CurrentScore;
+        ScoreText.text = $"$ {CurrentScore} $";
     }
 }

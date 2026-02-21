@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -179,13 +180,18 @@ public class GameOverSequence : MonoBehaviour
 
     private void PrepareForScreenShoot()
     {
-        foreach (var wall in walls)
+        GameObject[] moveableWalls = GameObject.FindGameObjectsWithTag("blue_wall");
+
+        foreach (var wall in walls.Concat(moveableWalls))
         {
-            wall.GetComponentInChildren<WallTransparency>().enabled = false;
-            
-            Color color = wall.GetComponentInChildren<SpriteRenderer>().color;
+            WallTransparency wallTransparency = wall.GetComponentInChildren<WallTransparency>();
+            if (wallTransparency != null)
+                wallTransparency.enabled = false;
+
+            SpriteRenderer spriteRenderer = wall.GetComponentInChildren<SpriteRenderer>();
+            Color color = spriteRenderer.color;
             color.a = 0.55f;
-            wall.GetComponentInChildren<SpriteRenderer>().color = color;
+            spriteRenderer.color = color;
         }
     }
 
