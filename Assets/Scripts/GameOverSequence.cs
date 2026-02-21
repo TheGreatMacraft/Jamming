@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(AudioSource))]
 public class GameOverSequence : MonoBehaviour
@@ -14,6 +16,7 @@ public class GameOverSequence : MonoBehaviour
 
     public AudioSource thisSource;
     public AudioSource musicSource;
+    public AudioSource sfxSource;
 
     public AudioClip gameOverClip;
     public float waitAfterClip = 0f;
@@ -23,6 +26,7 @@ public class GameOverSequence : MonoBehaviour
 
     public SmoothFollow smoothFollowScript;
     public Transform businessman;
+    public AudioSource businessmanAudioSource;
     public float newCameraFollowSpeed;
 
     private bool transitionStarted = false;
@@ -42,7 +46,13 @@ public class GameOverSequence : MonoBehaviour
     [SerializeField] public GameObject[] walls;
 
     public GameObject finalCamera;
+    public TextMeshProUGUI finalText;
+    public TextMeshProUGUI score;
 
+    [SerializeField] public string[] roastTexts;
+
+    private System.Random rnd = new System.Random();
+    
     private void Awake()
     {
         if (Instance == null)
@@ -50,8 +60,6 @@ public class GameOverSequence : MonoBehaviour
 
         thisSource = GetComponent<AudioSource>();
         thisSource.playOnAwake = false;
-
-        Debug.Log("Pixel Perfect Camera is bugged - can't be assigned in inspector");
     }
 
     private void Update()
@@ -63,18 +71,19 @@ public class GameOverSequence : MonoBehaviour
     public void GameOver()
     {
         DisableObjects();
-        
-        foreach (var canvas in allUnwantedUI)
-        {
-            canvas.enabled = false;
-        }
 
         StartCoroutine(PlayGameOverSound());
     }
 
     private void DisableObjects()
     {
+        foreach (var canvas in allUnwantedUI)
+        {
+            canvas.gameObject.SetActive(false);
+        }
+        
         musicSource.Stop();
+        sfxSource.volume = 0.2f;
         businessman.GetComponent<BusinessMan>().enabled = false;
         playerScript.enabled = false;
     }
@@ -132,11 +141,9 @@ public class GameOverSequence : MonoBehaviour
 
     private IEnumerator WaitForBlackScreen()
     {
-        Debug.Log("Waiting");
         float time = GetAnimationClip("GetMad").length + (GetAnimationClip("MadYapper").length * timesYapping + GetAnimationClip("Jump").length * timesJumping) * repeatSequence;
         yield return new WaitForSeconds(time);
         
-        Debug.Log("Fading in");
         StartCoroutine(FadeInImage(BlackScreen,blackScreenFade));
     }
     
@@ -151,6 +158,9 @@ public class GameOverSequence : MonoBehaviour
             timer += Time.deltaTime;
             color.a = Mathf.Clamp01(timer / duration);
             image.color = color;
+
+            businessmanAudioSource.volume = (duration-timer)/duration;
+            
             yield return null;
         }
         
@@ -158,6 +168,8 @@ public class GameOverSequence : MonoBehaviour
         image.color = color;
         
         PrepareForScreenShoot();
+
+        SetFinalText();
         
         BlackScreen.enabled = false;
         
@@ -175,6 +187,15 @@ public class GameOverSequence : MonoBehaviour
             color.a = 0.55f;
             wall.GetComponentInChildren<SpriteRenderer>().color = color;
         }
+    }
+
+    private void SetFinalText()
+    {
+        score.text = "$ " + ScoreUI.Instance.CurrentScore.ToString() + " $";
+        
+        int index = rnd.Next(roastTexts.Length);
+
+        finalText.text = roastTexts[index];
     }
 }
     

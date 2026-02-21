@@ -7,15 +7,23 @@ public class MyEventReceiver : MonoBehaviour
     private AudioSource audioSource;
     
     public SoundType soundType;
-    public float volume = 1f;
+    public SoundType secondarySoundType;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void PlaySound()
+    private void PlaySound(string audioName)
     {
-        SoundManager.PlaySound(soundType, volume, audioSource);
+        if(audioName != null)
+            SoundManager.PlaySound(Resources.Load<AudioClip>("MadAudio/" +  audioName));
+        else
+            SoundManager.PlaySound(soundType, audioSource);
+    }
+
+    private void PlaySecondary()
+    {
+        SoundManager.PlaySound(secondarySoundType, audioSource);
     }
 }

@@ -8,7 +8,8 @@ public enum SoundType
     FOOTSTEP,
     LIFT,
     PLACE,
-    BUSINESSMAN_TALKING
+    BUSINESSMAN_TALKING,
+    BUSINESSMAN_MAD
 }
 
 [System.Serializable]
@@ -43,7 +44,7 @@ public class SoundManager : MonoBehaviour
             soundDict[group.type] = group.sounds;
     }
 
-    public static void PlaySound(SoundType soundType, float volume = 1f, AudioSource newSource = null)
+    public static void PlaySound(SoundType soundType, AudioSource newSource = null)
     {
         int soundCount = instance.soundDict[soundType].Count;
         
@@ -51,6 +52,13 @@ public class SoundManager : MonoBehaviour
         
         AudioSource source = newSource?? instance.audioSource;
         
-        source.PlayOneShot(instance.soundDict[soundType][index], volume);
+        source.PlayOneShot(instance.soundDict[soundType][index]);
+    }
+    
+    public static void PlaySound(AudioClip audioClip, AudioSource newSource = null)
+    {
+        AudioSource source = newSource?? instance.audioSource;
+        
+        source.PlayOneShot(audioClip);
     }
 }
