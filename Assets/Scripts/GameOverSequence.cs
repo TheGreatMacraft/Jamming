@@ -3,11 +3,14 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class GameOverSequence : MonoBehaviour
 {
     public static GameOverSequence Instance;
+
+    public Player playerScript;
 
     public AudioSource thisSource;
     public AudioSource musicSource;
@@ -15,18 +18,30 @@ public class GameOverSequence : MonoBehaviour
     public AudioClip gameOverClip;
     public float waitAfterClip = 0f;
 
-    public PixelPerfectCamera pixelPerfectCamera;
+    public GameObject camera;
     public int finalZoom;
 
     public SmoothFollow smoothFollowScript;
     public Transform businessman;
     public float newCameraFollowSpeed;
 
+    private bool transitionStarted = false;
+    
     public float waitBeforeMadAnimation;
     public Animator businessmanAnimator;
     
     public int timesYapping;
     public int timesJumping;
+
+    public int repeatSequence;
+
+    public Image BlackScreen;
+    public float blackScreenFade;
+
+    [SerializeField] public Canvas[] allUnwantedUI;
+    [SerializeField] public GameObject[] walls;
+
+    public GameObject finalCamera;
 
     private void Awake()
     {
@@ -41,13 +56,18 @@ public class GameOverSequence : MonoBehaviour
 
     private void Update()
     {
-        if (smoothFollowScript.Target == businessman && smoothFollowScript.IsOnTarget)
+        if (smoothFollowScript.Target == businessman && smoothFollowScript.IsOnTarget && !transitionStarted)
             StartCoroutine(BusinessmanTransition());
     }
 
     public void GameOver()
     {
         DisableObjects();
+        
+        foreach (var canvas in allUnwantedUI)
+        {
+            canvas.enabled = false;
+        }
 
         StartCoroutine(PlayGameOverSound());
     }
@@ -56,6 +76,7 @@ public class GameOverSequence : MonoBehaviour
     {
         musicSource.Stop();
         businessman.GetComponent<BusinessMan>().enabled = false;
+        playerScript.enabled = false;
     }
 
     private IEnumerator PlayGameOverSound()
@@ -74,39 +95,26 @@ public class GameOverSequence : MonoBehaviour
 
     private IEnumerator BusinessmanTransition()
     {
+        transitionStarted = true;
+        
         yield return new WaitForSeconds(waitBeforeMadAnimation);
+        StartCoroutine(WaitForBlackScreen());
 
-        yield return PlayAnimationSequence();
-    }
-    
-    private IEnumerator PlayAnimationSequence()
-    {
         yield return PlayAnimation("GetMad", 1);
-        
-        yield return PlayAnimation("MadYapper", timesYapping);
-        
-        yield return PlayAnimation("Jump", timesJumping);
     }
+
 
     private IEnumerator PlayAnimation(string animationName, int timesRepeated)
     {
-        businessmanAnimator.Play(animationName, 0, 0f);
+        businessmanAnimator.Play(animationName);
+        
         var clip = GetAnimationClip(animationName);
-
-        if (clip == null)
-        {
-            Debug.LogWarning("Clip not found: " + animationName);
-            yield break;
-        }
-
-        float duration = clip.length * timesRepeated;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
+       yield return  new WaitForSeconds(clip.length * timesRepeated);
+       
+       if(animationName == "GetMad" || animationName == "Jump")
+           yield return PlayAnimation("MadYapper", timesYapping);
+       else if(animationName == "MadYapper")
+           yield return PlayAnimation("Jump", timesJumping);
     }
 
     private AnimationClip GetAnimationClip(string animationName)
@@ -122,6 +130,52 @@ public class GameOverSequence : MonoBehaviour
         return null;
     }
 
+    private IEnumerator WaitForBlackScreen()
+    {
+        Debug.Log("Waiting");
+        float time = GetAnimationClip("GetMad").length + (GetAnimationClip("MadYapper").length * timesYapping + GetAnimationClip("Jump").length * timesJumping) * repeatSequence;
+        yield return new WaitForSeconds(time);
+        
+        Debug.Log("Fading in");
+        StartCoroutine(FadeInImage(BlackScreen,blackScreenFade));
+    }
+    
+    private IEnumerator FadeInImage(Image image, float duration)
+    {
+        Color color = image.color;
+        
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            color.a = Mathf.Clamp01(timer / duration);
+            image.color = color;
+            yield return null;
+        }
+        
+        color.a = 1f;
+        image.color = color;
+        
+        PrepareForScreenShoot();
+        
+        BlackScreen.enabled = false;
+        
+        finalCamera.SetActive(true);
+        camera.SetActive(false);
+    }
+
+    private void PrepareForScreenShoot()
+    {
+        foreach (var wall in walls)
+        {
+            wall.GetComponentInChildren<WallTransparency>().enabled = false;
+            
+            Color color = wall.GetComponentInChildren<SpriteRenderer>().color;
+            color.a = 0.55f;
+            wall.GetComponentInChildren<SpriteRenderer>().color = color;
+        }
+    }
 }
     
     
