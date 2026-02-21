@@ -14,7 +14,8 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        gameSecondsLeft = gameMinutes * 60;
+        //gameSecondsLeft = gameMinutes * 60;
+        gameSecondsLeft = 1;
         UpdateTimer();
     }
 
@@ -22,8 +23,9 @@ public class Timer : MonoBehaviour
     {
         if (gameSecondsLeft <= 0)
         {
-            //Trigger Game Over
+            GameOverSequence.Instance.GameOver();
             print("Game Over");
+            this.gameObject.SetActive(false);
         }
         
         timer += Time.deltaTime;

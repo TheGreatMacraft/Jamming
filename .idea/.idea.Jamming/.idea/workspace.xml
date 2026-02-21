@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d6455670-28af-40ab-8e17-c4eb3df660bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jamming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/characters/bussinesman.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/characters/bussinesman.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixelart/characters/bussinesman.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixelart/characters/bussinesman.aseprite.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmoothFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmoothFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +118,8 @@
       <workItem from="1771507962416" duration="15322000" />
       <workItem from="1771572995954" duration="3496000" />
       <workItem from="1771600699528" duration="3710000" />
+      <workItem from="1771659121670" duration="275000" />
+      <workItem from="1771659544233" duration="8174000" />
     </task>
     <servers />
   </component>
