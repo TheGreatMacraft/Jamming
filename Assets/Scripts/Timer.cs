@@ -14,8 +14,8 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        //gameSecondsLeft = gameMinutes * 60;
-        gameSecondsLeft = 40;
+        gameSecondsLeft = gameMinutes * 60;
+        //gameSecondsLeft = 40;
         UpdateTimer();
     }
 
