@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class NextToRequirement : Requirement
@@ -25,8 +26,23 @@ public class NextToRequirement : Requirement
         foreach (Collider2D collider in queryResults)
         {
             if (Util.IsTagOnParent(collider.gameObject, NextToTag))
-                return true;
+            {
+                var wallCollider = collider.GetComponentInParent<WallCollisionFix>();
+                if (wallCollider != null)
+                {
+                    //Debug.Log("checking wall collider");
+                    if (wallCollider.DefaultBounds.Intersects(reachCollider.bounds))
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
+        //Debug.Log("Fail next to requirement for " + AnimationUtility.CalculateTransformPath(transform, transform.root));
         return false;
     }
 }

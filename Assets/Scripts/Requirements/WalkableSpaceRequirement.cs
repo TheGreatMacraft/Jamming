@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class WalkableSpaceRequirement : Requirement
@@ -37,13 +38,17 @@ public class WalkableSpaceRequirement : Requirement
                 continue;
 
             var wallCollider = collider.GetComponentInParent<WallCollisionFix>();
-            if (wallCollider != null && wallCollider.ColliderDefault != null)
+            if (wallCollider != null)
             {
                 if (wallCollider.DefaultBounds.Intersects(spaceNeededCollider.bounds))
+                {
+                    //Debug.Log("Fail Walkable space requirement on " + AnimationUtility.CalculateTransformPath(collider.transform, transform.root) + " " + collider.name);
                     return false;
+                }
             }
             else
             {
+                //Debug.Log("Fail Walkable space requirement on " + AnimationUtility.CalculateTransformPath(collider.transform, transform.root) + " " + collider.name);
                 return false;
             }
         }

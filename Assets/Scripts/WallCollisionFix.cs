@@ -8,9 +8,10 @@ public class WallCollisionFix : MonoBehaviour
     public float YOffset;
 
     public bool Horizontal = false;
-    public bool OnlyDefault = false;
 
     public Bounds DefaultBounds { get; private set; }
+
+    [HideInInspector] public bool ForceRefresh = true;
 
     bool playerAbove;
     Item item;
@@ -19,21 +20,11 @@ public class WallCollisionFix : MonoBehaviour
     {
         ColliderExtendedUp.enabled = false;
         ColliderExtendedDown.enabled = false;
-        if (ColliderDefault != null)
-        {
-            ColliderDefault.enabled = true;
-            DefaultBounds = ColliderDefault.bounds;
-        }
+        ColliderDefault.enabled = true;
+        DefaultBounds = ColliderDefault.bounds;
+        ForceRefresh = true;
 
         item = GetComponentInParent<Item>();
-    }
-
-    private void Start()
-    {
-        if (Horizontal)
-            playerAbove = Player.Instance.transform.position.x <= transform.position.x + YOffset;
-        else
-            playerAbove = Player.Instance.transform.position.y <= transform.position.y + YOffset;
     }
 
     private void Update()
@@ -45,11 +36,13 @@ public class WallCollisionFix : MonoBehaviour
             ColliderDefault.enabled = false;
             return;
         }
-        if (OnlyDefault || (item != null && !item.IsPlacedFixed))
+        if (item != null && !item.IsPlacedFixed)
         {
             ColliderExtendedUp.enabled = false;
             ColliderExtendedDown.enabled = false;
             ColliderDefault.enabled = true;
+            DefaultBounds = ColliderDefault.bounds;
+            ForceRefresh = true;
             return;
         }
 
@@ -59,17 +52,23 @@ public class WallCollisionFix : MonoBehaviour
         else
             playerAboveNow = Player.Instance.transform.position.y > transform.position.y + YOffset;
 
+        if (ForceRefresh)
+        {
+            playerAbove = !playerAboveNow;
+            ForceRefresh = false;
+        }
+
         if (playerAboveNow && !playerAbove)
         {
             ColliderExtendedUp.enabled = false;
             ColliderExtendedDown.enabled = true;
-            if (ColliderDefault != null) ColliderDefault.enabled = false;
+            ColliderDefault.enabled = false;
         }
         else if (!playerAboveNow && playerAbove)
         {
             ColliderExtendedDown.enabled = false;
             ColliderExtendedUp.enabled = true;
-            if (ColliderDefault != null) ColliderDefault.enabled = false;
+            ColliderDefault.enabled = false;
         }
 
         playerAbove = playerAboveNow;

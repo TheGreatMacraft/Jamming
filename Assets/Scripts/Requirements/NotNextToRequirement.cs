@@ -25,7 +25,20 @@ public class NotNextToRequirement : Requirement
         foreach (Collider2D collider in queryResults)
         {
             if (Util.IsTagOnParent(collider.gameObject, NotNextToTag))
-                return false;
+            {
+                var wallCollider = collider.GetComponentInParent<WallCollisionFix>();
+                if (wallCollider != null)
+                {
+                    if (wallCollider.DefaultBounds.Intersects(reachCollider.bounds))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
         return true;
     }

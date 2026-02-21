@@ -1374,7 +1374,7 @@ MonoBehaviour:
   ColliderDefault: {fileID: 594262930}
   YOffset: 1
   Horizontal: 0
-  OnlyDefault: 0
+  ForceRefresh: 1
 --- !u!1 &310981238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.90625
+  orthographic size: 6.7083335
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3684,7 +3684,7 @@ MonoBehaviour:
   ColliderDefault: {fileID: 1504571700}
   YOffset: 1
   Horizontal: 0
-  OnlyDefault: 0
+  ForceRefresh: 1
 --- !u!1 &715259512
 GameObject:
   m_ObjectHideFlags: 0
