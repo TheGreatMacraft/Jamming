@@ -187,16 +187,18 @@ public class Item : MonoBehaviour
 
         bool prevRequirementsSatisfied = RequirementsSatisfied;
 
-        bool all = true;
-        foreach (Requirement req in GetComponentsInChildren<Requirement>())
+        bool inHouse = colliders
+            .Where(collider => !collider.isTrigger && collider.isActiveAndEnabled)
+            .Any(collider => RequirementManager.Instance.HouseBounds.bounds.Intersects(collider.bounds));
+
+        bool all = false;
+        if (inHouse)
         {
-            if (req.IsSatisfied(this) == false)
-            {
-                all = false;
-            }
+            Requirement[] requirements = GetComponentsInChildren<Requirement>();
+            all = requirements.All(req => req.IsSatisfied(this));
         }
 
-        RequirementsSatisfied = all;
+        RequirementsSatisfied = inHouse && all;
 
         if (!RequirementsSatisfied && warningFlash == null)
         {

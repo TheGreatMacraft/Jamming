@@ -12,6 +12,8 @@ public class RequirementManager : MonoBehaviour
     public RectTransform RequirementUIParent;
     public RectTransform RequirementUIElement;
 
+    public BoxCollider2D HouseBounds;
+
     public static bool AllRequirementsSatisfied { get; private set; } = true;
 
     private void Awake()
