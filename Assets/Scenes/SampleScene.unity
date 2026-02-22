@@ -1412,7 +1412,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 5085470a22855054b964d69518b75a4b, type: 3}
     - {fileID: 8300000, guid: 66a636844c4d904478cffcef49815c51, type: 3}
     - {fileID: 8300000, guid: 866927eefd439c144b62420544567dd9, type: 3}
-  - type: 3
+  - type: 4
     sounds:
     - {fileID: 8300000, guid: fc34d0a478650de438d320a42716d7b5, type: 3}
     - {fileID: 8300000, guid: acfcf0a4c9bf86a4db55d071ac7af02a, type: 3}
@@ -1422,21 +1422,27 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 716701910f007bd40bebd3491ef2a008, type: 3}
     - {fileID: 8300000, guid: 2b7aff18d6ab924418104737425a1bb6, type: 3}
     - {fileID: 8300000, guid: f835e21135d6a6a4abf56b73f4e318be, type: 3}
-  - type: 3
-    sounds:
-    - {fileID: 8300000, guid: fc34d0a478650de438d320a42716d7b5, type: 3}
-    - {fileID: 8300000, guid: acfcf0a4c9bf86a4db55d071ac7af02a, type: 3}
-    - {fileID: 8300000, guid: 90a098edb1c9b39448a743dc89e0c94f, type: 3}
-    - {fileID: 8300000, guid: 208765756cba2c147b5f67da8f3f4466, type: 3}
-    - {fileID: 8300000, guid: 70b19c64e672db84c8b447cf0fe51f5d, type: 3}
-    - {fileID: 8300000, guid: 716701910f007bd40bebd3491ef2a008, type: 3}
-    - {fileID: 8300000, guid: 2b7aff18d6ab924418104737425a1bb6, type: 3}
-  - type: 4
+  - type: 5
     sounds:
     - {fileID: 8300000, guid: 94656c58e6265ce4490ff4abf2150c86, type: 3}
     - {fileID: 8300000, guid: 0fd41bdd59e0c3c4e8ec646be10e48ab, type: 3}
     - {fileID: 8300000, guid: 667f868fc6d138e428bf7618b87f8d0b, type: 3}
     - {fileID: 8300000, guid: eb83a7c935d3c024e97fb59cb56416dd, type: 3}
+  - type: 6
+    sounds:
+    - {fileID: 8300000, guid: a6d29c2bcb6ce7443acda677968eff70, type: 3}
+  - type: 7
+    sounds:
+    - {fileID: 8300000, guid: 286b51d74e6708c4c885961a525937ed, type: 3}
+  - type: 1
+    sounds:
+    - {fileID: 8300000, guid: a0259cb7269af2947b9fcf8993d6f1c2, type: 3}
+  - type: 2
+    sounds:
+    - {fileID: 8300000, guid: 81fb1bb24f76acf449424087569d2da5, type: 3}
+  - type: 3
+    sounds:
+    - {fileID: 8300000, guid: b40ff5a48aad63a49be0ab42dabf4683, type: 3}
   audioSource: {fileID: 0}
 --- !u!4 &310981241
 Transform:
@@ -2671,7 +2677,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.7083335
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4168,15 +4174,15 @@ RectTransform:
   m_GameObject: {fileID: 857227866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1531313348}
   m_Father: {fileID: 311124459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.700012}
+  m_AnchoredPosition: {x: -23.66, y: -15.700012}
   m_SizeDelta: {x: 356.0442, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &857227868
@@ -5366,9 +5372,9 @@ RectTransform:
   - {fileID: 54127268}
   m_Father: {fileID: 311124459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.0017089844, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -307, y: 0}
   m_SizeDelta: {x: 307, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1249130364
@@ -7854,15 +7860,15 @@ RectTransform:
   m_GameObject: {fileID: 1624071382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1464240218}
   m_Father: {fileID: 311124459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -55.700012}
+  m_AnchoredPosition: {x: -11, y: -75}
   m_SizeDelta: {x: 280.52002, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1624071384
@@ -7879,6 +7885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1464240219}
   gameMinutes: 10
+  red_color: {r: 0.88235295, g: 0.09411765, b: 0, a: 1}
 --- !u!1 &1659512097
 GameObject:
   m_ObjectHideFlags: 0

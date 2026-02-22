@@ -23,6 +23,8 @@ public class ScoreUI : MonoBehaviour
 
     public void AddScore(int amount)
     {
+        SoundManager.PlaySound(SoundType.SCORE_UP);
+        
         if (amount <= 0)
             return;
         CurrentScore += amount;

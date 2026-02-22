@@ -6,10 +6,13 @@ using Random = System.Random;
 public enum SoundType
 {
     FOOTSTEP,
-    LIFT,
-    PLACE,
+    PICK_UP,
+    SCORE_UP,
+    SCORE_DOWN,
     BUSINESSMAN_TALKING,
-    BUSINESSMAN_MAD
+    BUSINESSMAN_MAD,
+    UI_SELECT,
+    UI_MOVE
 }
 
 [System.Serializable]

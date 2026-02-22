@@ -44,6 +44,7 @@ public class SoundMenuManager : MonoBehaviour
 
         if (selectedElementIndex == 2 && Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            SoundManager.PlaySound(SoundType.UI_SELECT);
             pauseMenu.SetActive(true);
             this.gameObject.SetActive(false);
         }
@@ -59,6 +60,7 @@ public class SoundMenuManager : MonoBehaviour
 
     private void UpdateElements(int modifier)
     {
+        SoundManager.PlaySound(SoundType.UI_MOVE);
         if (selectedElementIndex == 2)
             backButton.sprite = redButton;
         else

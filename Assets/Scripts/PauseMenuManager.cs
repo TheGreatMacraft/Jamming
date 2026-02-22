@@ -37,6 +37,7 @@ public class PauseMenuManager : MonoBehaviour
 
     private void UpdateButtons(int modifier)
     {
+        SoundManager.PlaySound(SoundType.UI_MOVE);
         buttons[selectedButtonIndex].GetComponent<Image>().sprite = selectedButtonIndex == 2 ? redButton : blueButton;
         
         selectedButtonIndex += modifier;
@@ -46,6 +47,7 @@ public class PauseMenuManager : MonoBehaviour
 
     private void ButtonPressed()
     {
+        SoundManager.PlaySound(SoundType.UI_SELECT);
         switch (selectedButtonIndex)
         {
             case 0:

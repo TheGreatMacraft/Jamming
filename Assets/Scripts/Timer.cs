@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
     
     private float timer;
 
+    public Color red_color;
+
     private void Awake()
     {
         gameSecondsLeft = gameMinutes * 60;
@@ -30,6 +32,11 @@ public class Timer : MonoBehaviour
             GameOverSequence.Instance.GameOver();
             print("Game Over");
             this.gameObject.SetActive(false);
+        }
+        
+        else if (gameSecondsLeft == 60)
+        {
+            timerText.color = red_color;
         }
         
         timer += Time.deltaTime;
