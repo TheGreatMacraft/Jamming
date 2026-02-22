@@ -100,7 +100,8 @@ public class Player : MonoBehaviour
         {
             if (carriedItem == null)
             {
-                if (closestItem != null)
+                bool bmanVeryClose = Vector2.Distance(BusinessMan.Instance.transform.position, (Vector2)transform.position + PickupCenterOffset) < 1.5f;
+                if (closestItem != null && !bmanVeryClose)
                     PickupItem(closestItem);
                 else
                     TalkToBusinessMan();
@@ -207,7 +208,7 @@ public class Player : MonoBehaviour
     void TalkToBusinessMan()
     {
         BusinessMan bman = BusinessMan.Instance;
-        if (Vector2.Distance(bman.transform.position, (Vector2)transform.position + PickupCenterOffset) < PickupReach)
+        if (Vector2.Distance(bman.transform.position, (Vector2)transform.position + PickupCenterOffset) < PickupReach * 2.0f)
         {
             Item item = bman.SpawnNewItem();
             if (item != null)

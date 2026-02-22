@@ -11,7 +11,7 @@ public class TogglePauseMenuManager : MonoBehaviour
     
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame)
             TogglePauseMenu();
     }
 
