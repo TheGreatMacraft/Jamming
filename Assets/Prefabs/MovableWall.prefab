@@ -236,7 +236,7 @@ MonoBehaviour:
   ColliderDefault: {fileID: 811354389417651783}
   YOffset: 0
   Horizontal: 1
-  OnlyDefault: 0
+  ForceRefresh: 1
 --- !u!1 &4193303182572235377
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   ColliderDefault: {fileID: 3778216020865566473}
   YOffset: -1
   Horizontal: 0
-  OnlyDefault: 0
+  ForceRefresh: 1
 --- !u!1 &6781146584985385708
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateableItem
   Weight: 50
+  Score: 300
   IsPlaced: 1
   PickupPosition: {fileID: 2351920816717722311}
   SpriteRenderer: {fileID: 0}
