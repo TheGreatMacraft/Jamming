@@ -14,6 +14,8 @@ public class BusinessMan : MonoBehaviour
 
     public ItemGroup[] RandomlyPickedItems;
 
+    public int timerSecondsBonus;
+
     public TMP_Text ItemTodoText;
 
     public TMP_Text SpeachText;
@@ -106,6 +108,9 @@ public class BusinessMan : MonoBehaviour
             }
 
             itemGroupTotalCount = currentItemGroup.Count;
+
+            if (ScoreUI.Instance.CurrentScore > 0)
+                Timer.Instance.AddTime(timerSecondsBonus);
         }
 
         GameObject go = Instantiate(currentItemGroup.ItemPrefab, transform.position, Quaternion.identity);

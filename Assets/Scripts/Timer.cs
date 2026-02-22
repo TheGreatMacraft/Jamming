@@ -6,7 +6,9 @@ public class Timer : MonoBehaviour
 {
     public static Timer Instance;
 
-    public TextMeshProUGUI timerText;
+    public TMP_Text timerText;
+
+    public GameObject TimeIncreaseAnimationPrefab;
 
     public int gameMinutes;
 
@@ -56,5 +58,19 @@ public class Timer : MonoBehaviour
         int seconds = gameSecondsLeft - minutes * 60;
         
         timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
+    public void AddTime(int seconds)
+    {
+        if (seconds <= 0)
+            return;
+
+        gameSecondsLeft += seconds;
+        UpdateTimer();
+
+        GameObject popup = Instantiate(TimeIncreaseAnimationPrefab, transform);
+        popup.GetComponent<RectTransform>().anchoredPosition = timerText.rectTransform.offsetMax;
+        popup.GetComponent<TMP_Text>().text = $"+{seconds}s";
+        Destroy(popup, 0.5f);
     }
 }

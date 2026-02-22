@@ -22,9 +22,7 @@ public class ScoreUI : MonoBehaviour
     }
 
     public void AddScore(int amount)
-    {
-        SoundManager.PlaySound(SoundType.SCORE_UP);
-        
+    {        
         if (amount <= 0)
             return;
         CurrentScore += amount;
@@ -37,6 +35,8 @@ public class ScoreUI : MonoBehaviour
         popup.GetComponent<RectTransform>().anchoredPosition = ScoreText.rectTransform.offsetMax;
         popup.GetComponent<TMP_Text>().text = $"+{amount}$";
         Destroy(popup, 0.5f);
+
+        SoundManager.PlaySound(SoundType.SCORE_UP);
     }
 
     public void RemoveScore(int amount)
